@@ -14,11 +14,11 @@ const translations = {
 
 		'hero.eyebrow': 'Creative engineering meets clarity',
 		'hero.title': 'Digital services crafted with precision.',
-		'hero.body': 'I design and build clean, performant products with your asthetic.',
+		'hero.body': 'I design and build clean, performant products with your aesthetic.',
 		'hero.ctaPrimary': 'Offers',
 		'hero.ctaSecondary': 'Socials',
-		'hero.meta1': 'Based in Germany - Remote-ready',
-		'hero.meta2': 'UX - Frontend - Systems thinking',
+		'hero.meta1': 'Based in Aargau, Switzerland - Fully Remote',
+		'hero.meta2': 'UX · Frontend · Backend',
 		'hero.card1.label': 'Delivery Insurance',
 		'hero.card1.value': '1 Month Delivery',
 		'hero.card1.hint': 'Websites will be shipped within one month unless specified',
@@ -128,7 +128,7 @@ const translations = {
 
 		'socials.eyebrow': 'Connect',
 		'socials.title': "Let's build something clear and bold.",
-		'socials.body': 'Wheter you have a question about my code, my packages or anything else.',
+		'socials.body': 'Whether you have a question about my code, my packages or anything else.',
 		'socials.card.title': 'Availability',
 		'socials.card.body': 'Getting back to you within 24 hours, contact me on:',
 
@@ -165,11 +165,11 @@ const translations = {
 
         'hero.eyebrow': 'Engineering mit Klarheit',
         'hero.title': 'Digitale Builds, präzise gemacht.',
-        'hero.body': 'Ich baue saubere, schnelle Produkte in deinem Look.',
+		'hero.body': 'Ich gestalte und baue saubere, performante Produkte in deinem Stil.',
         'hero.ctaPrimary': 'Angebote',
         'hero.ctaSecondary': 'Socials',
-        'hero.meta1': 'Deutschland · Remote möglich',
-        'hero.meta2': 'UX · Frontend · Systems',
+		'hero.meta1': 'Aargau, Schweiz · Voll remote',
+		'hero.meta2': 'UX · Frontend · Backend',
         'hero.card1.label': 'Delivery',
         'hero.card1.value': '1 Monat',
         'hero.card1.hint': 'Lieferung in 30 Tagen, falls nicht anders geplant.',
@@ -280,7 +280,7 @@ const translations = {
 
         'socials.eyebrow': 'Kontakt',
         'socials.title': 'Lass uns was Klareres bauen.',
-        'socials.body': 'Fragen zu Code, Paketen oder irgendwas anderem?',
+		'socials.body': 'Fragen zu Code, Paketen oder etwas anderem?',
         'socials.card.title': 'Antwortzeit',
         'socials.card.body': 'Ich antworte in 24h. Schreib mir hier:',
 
