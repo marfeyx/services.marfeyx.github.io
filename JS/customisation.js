@@ -49,6 +49,12 @@
 		pageBreakdownEl.textContent = `${pages} Page${pages > 1 ? 's' : ''} (${formatPrice(pageTotal)})`;
 	};
 
+	const addonsTotal = () => {
+		let sum = 0;
+		selectedAddons.forEach((a) => (sum += a.price));
+		return sum;
+	};
+
 	const renderAddons = () => {
 		selectedAddonsList.innerHTML = '';
 
@@ -86,10 +92,10 @@
 			return { state: 'invalid', pages: null, error: 'Please enter a valid number.' };
 		}
 		if (pages <= 0) {
-			return { state: 'invalid', pages: pages, error: 'Pages must be at least 1.' };
+			return { state: 'invalid', pages, error: 'Pages must be at least 1.' };
 		}
 		if (pages > 20) {
-			return { state: 'invalid', pages: pages, error: 'Max 20 pages allowed.' };
+			return { state: 'invalid', pages, error: 'Max 20 pages allowed.' };
 		}
 
 		return { state: 'valid', pages, error: '' };
@@ -98,42 +104,50 @@
 	const updateTotals = () => {
 		const { state, pages, error } = getPagesValidation();
 
-		// Keep your existing warning behavior (only when numeric value exists)
+		// warning only when numeric pages exist
 		addonWarning.textContent = Number.isFinite(pages) && pages > 8 ? 'Addons not available with 9+ Pages' : '';
 
-		// keep hidden input in sync
+		// keep hidden page input in sync
 		pageCountInput.value = Number.isFinite(pages) ? pages : '';
 
-		// empty input: no error, hide breakdown, show base if package selected
+		const addOnSum = addonsTotal();
+		const base = selectedPackage ? selectedPackage.basePrice : 0;
+
+		// Always show *something* sensible in the total:
+		// - if package selected: base + addons (+ pages if valid)
+		// - if no package: addons only (or 0)
+		const partialTotal = base + addOnSum;
+
+		// empty pages: show base+addons, hide breakdown, don't write estimated_total
 		if (state === 'empty') {
 			setPagesError('');
-			estimatedTotalInput.value = '';
 			hidePageBreakdown();
-			totalPriceEl.textContent = selectedPackage ? formatPrice(selectedPackage.basePrice) : '0 CHF';
+
+			totalPriceEl.textContent = (selectedPackage || addOnSum > 0) ? formatPrice(partialTotal) : '0 CHF';
+			estimatedTotalInput.value = '';
 			return;
 		}
 
-		// invalid input: show error, hide breakdown, stop calc
+		// invalid pages: show base+addons (still!), hide breakdown, don't write estimated_total
 		if (state === 'invalid') {
 			setPagesError(error);
-			estimatedTotalInput.value = '';
 			hidePageBreakdown();
-			totalPriceEl.textContent = '0 CHF';
+
+			totalPriceEl.textContent = (selectedPackage || addOnSum > 0) ? formatPrice(partialTotal) : '0 CHF';
+			estimatedTotalInput.value = '';
 			return;
 		}
 
-		// valid input
+		// valid pages: full calc
 		setPagesError('');
 
-		let total = 0;
+		let total = partialTotal;
 
 		if (selectedPackage) {
-			const packageTotal = selectedPackage.basePrice;
 			const pageTotal = pages * PER_PAGE_PRICE;
+			total += pageTotal;
 
-			total += packageTotal + pageTotal;
-
-			selectedPackageLabel.textContent = `${selectedPackage.name} (${formatPrice(packageTotal)})`;
+			selectedPackageLabel.textContent = `${selectedPackage.name} (${formatPrice(base)})`;
 			selectedPackageInput.value = selectedPackage.name;
 
 			showPageBreakdown(pages, pageTotal);
@@ -143,12 +157,9 @@
 			hidePageBreakdown();
 		}
 
-		selectedAddons.forEach((addon) => {
-			total += addon.price;
-		});
-
+		// Only store estimated total if it’s a real, complete calculation
 		estimatedTotalInput.value = selectedPackage ? Number(total).toFixed(2) : '';
-		totalPriceEl.textContent = selectedPackage ? formatPrice(total) : '0 CHF';
+		totalPriceEl.textContent = (selectedPackage || addOnSum > 0) ? formatPrice(total) : '0 CHF';
 	};
 
 	const handlePackageSelect = (card) => {

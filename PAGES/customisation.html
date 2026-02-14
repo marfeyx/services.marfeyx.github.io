@@ -236,13 +236,31 @@
 
 						<label class="field">
 							<span data-i18n="custom.checkout.email">Email</span>
-							<input type="email" name="email" required>
+							<input
+								type="email"
+								name="email"
+								required
+								autocomplete="email"
+								inputmode="email"
+								placeholder="name@example.com"
+							>
 						</label>
 
 						<label class="field">
 							<span data-i18n="custom.checkout.phone">Phone number</span>
-							<input type="tel" name="phone" required>
+							<input
+								type="tel"
+								name="phone"
+								required
+								autocomplete="tel"
+								inputmode="tel"
+								placeholder="+41 00 000 00 00"
+								pattern="^\+?[1-9][\d\s]{7,18}$"
+								title="Enter a valid international phone number"
+							>
+							<p class="fine-print" id="phone-error" aria-live="polite"></p>
 						</label>
+
 
 						<label class="field">
 							<span data-i18n="custom.checkout.notes">Project notes (optional)</span>
