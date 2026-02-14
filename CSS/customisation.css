@@ -125,7 +125,6 @@ main { padding: 30px 0 80px; display: flex; flex-direction: column; gap: 28px; }
 .foot-links a { color: var(--text); text-decoration: none; opacity: 0.8; }
 .foot-links a:hover { opacity: 1; }
 
-/* Language modal */
 .lang-overlay { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; padding: 16px; background: rgba(5, 7, 13, 0.55); backdrop-filter: blur(12px); z-index: 999; }
 .lang-modal { width: min(420px, 100%); background: var(--panel-strong); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); padding: 20px; display: grid; gap: 12px; }
 .lang-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; }
@@ -143,3 +142,69 @@ main { padding: 30px 0 80px; display: flex; flex-direction: column; gap: 28px; }
 	.hero-card, .entry, .steps li { padding: 14px; }
 	main { padding: 10px 0 60px; }
 }
+
+.selectable { cursor: pointer; transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
+.selectable:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.selectable.active { border-color: var(--accent); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); transform: translateY(-2px); background: color-mix(in srgb, var(--panel-strong) 82%, var(--accent) 18%); border-width: 2px; }
+.card.selectable.active .tag,
+.addon-card.selectable.active .tag { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #0c1221; border-color: transparent; }
+
+.checkout-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 16px; }
+.summary, .contact { background: var(--panel-strong); border: 1px solid var(--border); border-radius: 16px; padding: 16px; display: grid; gap: 14px; }
+.summary-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.addons-summary { display: grid; gap: 4px; }
+.selected-addons { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; color: var(--text); }
+.selected-addons li { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; }
+.total { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--border); background: var(--panel); }
+.total-value { font-weight: 700; font-size: 22px; }
+
+.package-detail { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+.inline-field { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.inline-field input { width: 130px; }
+
+@media (max-width: 600px) {
+	.inline-field { flex-wrap: wrap; align-items: flex-start; }
+	.inline-field input { width: 100%; }
+}
+
+.field { display: grid; gap: 6px; }
+.field input, .field textarea, .field select { width: 100%; padding: 12px; border-radius: 12px; border: 1px solid var(--border); background: var(--panel); color: var(--text); font-size: 15px; }
+.field input:focus, .field textarea:focus, .field select:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+
+.form-status { min-height: 18px; color: var(--muted); font-size: 14px; }
+.fine-print { margin: 6px 0 0; }
+
+@media (max-width: 840px) { .checkout-grid { grid-template-columns: 1fr; } }
+
+/* ✅ Checkout-only edits */
+/* Make spacing identical between "Selected package" and "Selected add-ons" blocks */
+.checkout .addons-summary { gap: 4px; }
+.checkout .selected-addons { margin-top: 6px; }
+
+/* Summary boxes are already styled via .selected-addons li, keep this for clarity */
+.checkout .summary-box {
+	background: var(--panel);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+	padding: 10px 12px;
+}
+
+/* Remove number spinners (+/- arrows) */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+#pages-error {
+	margin: -6px 0 0;
+	color: var(--muted);
+	font-size: 13px;
+}
+#pages-error.error {
+	color: #ffb4b4; /* subtle red */
+}
+

@@ -80,7 +80,7 @@ const translations = {
 		'offers.pkg1.feat5': '\u00a0',
 		'offers.pkg1.meta': 'Estimate: 2-4 Weeks',
 		'offers.pkg2.tier': 'Launch',
-		'offers.pkg2.title': 'Full Website',
+		'offers.pkg2.title': 'Full Website with Backend',
 		'offers.pkg2.price': 'From 275 CHF',
 		'offers.pkg2.feat1': '✅ Unlimited Amount Of Pages',
 		'offers.pkg2.feat2': '✅ SEO-Ready with Metadata',
@@ -253,7 +253,7 @@ const translations = {
         'offers.pkg1.meta': 'Dauer: 2–4 Wochen',
 
         'offers.pkg2.tier': 'Launch',
-        'offers.pkg2.title': 'Full Website',
+        'offers.pkg2.title': 'Full Website with Backend',
         'offers.pkg2.price': 'Ab 275 CHF',
         'offers.pkg2.feat1': '✅ Beliebig viele Seiten',
         'offers.pkg2.feat2': '✅ SEO-ready + Metadaten',
