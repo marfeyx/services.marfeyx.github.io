@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Socials - Marfeyx Studio</title>
+	<title>Socials - Marfeyx</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,11 +18,11 @@
 	<header class="shell">
 		<div class="brand">
 			<div class="dot"></div>
-			<span class="brand-name" data-i18n="brand">Marfeyx Studio</span>
+			<span class="brand-name" data-i18n="brand">Marfeyx</span>
 		</div>
 		<nav class="nav">
 			<a href="../index.html" data-i18n="nav.home">Home</a>
-			<a href="about.html" data-i18n="nav.about">About</a>
+			<a href="offers.html" data-i18n="nav.about">Offers</a>
 			<a href="socials.html" class="active" data-i18n="nav.socials">Socials</a>
 		</nav>
 		<div class="actions">
@@ -41,80 +41,62 @@
 			<div class="hero-text">
 				<p class="eyebrow" data-i18n="socials.eyebrow">Connect</p>
 				<h1 data-i18n="socials.title">Let's build something clear and bold.</h1>
-				<p class="lede" data-i18n="socials.body">Whether you need a polished landing, a product refresh, or a design-to-code partner, I'm here to collaborate.</p>
-			</div>
-			<div class="hero-card glass">
-				<h3 data-i18n="socials.card.title">Availability</h3>
-				<p class="hint" data-i18n="socials.card.body">Accepting new projects from Q2 - Remote-friendly - CET</p>
-				<div class="chips tight">
-					<span>LinkedIn</span>
-					<span>GitHub</span>
-					<span>Dribbble</span>
-				</div>
-			</div>
-		</section>
-
-		<section class="grid glass" id="contact">
-			<div class="section-head">
-				<p class="eyebrow" data-i18n="contact.eyebrow">Socials</p>
-				<h2 data-i18n="contact.title">Find me online</h2>
-				<p class="hint" data-i18n="contact.body">Pick the channel that fits you best - responses within one business day.</p>
-			</div>
-			<div class="cards">
-				<article class="card">
-					<div class="icon">💼</div>
-					<h3>LinkedIn</h3>
-					<p data-i18n="contact.linkedin.body">Product stories, team updates, and collaboration threads.</p>
-					<a class="pill ghost" href="https://www.linkedin.com" target="_blank" rel="noreferrer" data-i18n="contact.linkedin.cta">Open profile</a>
-				</article>
-				<article class="card">
-					<div class="icon">💻</div>
-					<h3>GitHub</h3>
-					<p data-i18n="contact.github.body">Live code, experiments, and frontend components.</p>
-					<a class="pill ghost" href="https://github.com" target="_blank" rel="noreferrer" data-i18n="contact.github.cta">View repos</a>
-				</article>
-				<article class="card">
-					<div class="icon">🎯</div>
-					<h3>Dribbble</h3>
-					<p data-i18n="contact.dribbble.body">Glassy UI shots, motion studies, and visual explorations.</p>
-					<a class="pill ghost" href="https://dribbble.com" target="_blank" rel="noreferrer" data-i18n="contact.dribbble.cta">See shots</a>
-				</article>
+				<p class="lede" data-i18n="socials.body">Wheter you have a question about my code, my packages or anything else.</p>
 			</div>
 		</section>
 
 		<section class="columns glass">
 			<div>
 				<p class="eyebrow" data-i18n="form.eyebrow">Message</p>
-				<h2 data-i18n="form.title">Tell me about your idea</h2>
-				<p class="hint" data-i18n="form.body">Share context, goals, and timeline. I'll reply with next steps and a suggested approach.</p>
+				<h2 data-i18n="form.title">Contact me directly</h2>
+				<p class="hint" data-i18n="form.body">Contact me directly about projects.</p>
 			</div>
-			<form class="form" aria-label="Contact form">
-				<label>
-					<span data-i18n="form.name">Name</span>
-					<input type="text" name="name" placeholder="Your name" required>
-				</label>
-				<label>
-					<span data-i18n="form.email">Email</span>
-					<input type="email" name="email" placeholder="you@example.com" required>
-				</label>
-				<label>
-					<span data-i18n="form.project">Project</span>
-					<textarea name="project" rows="4" placeholder="What are you building?" required></textarea>
-				</label>
-				<button class="pill primary" type="submit" data-i18n="form.submit">Send message</button>
-			</form>
+			<form class="form"
+                action="https://formspree.io/f/meelayyp"
+                method="POST"
+                aria-label="Contact form">
+
+                <!-- Honeypot (anti-spam, hidden from users) -->
+                <input type="text" name="_gotcha" style="display:none">
+
+                <!-- Optional subject -->
+                <input type="hidden" name="_subject" value="New message from marfeyx.ch">
+
+                <label>
+                    <span data-i18n="form.name">Name</span>
+                    <input type="text" name="name" required>
+                </label>
+
+                <label>
+                    <span data-i18n="form.email">Email</span>
+                    <input type="email" name="email" required>
+                </label>
+
+                <label>
+                    <span data-i18n="form.project">Message</span>
+                    <textarea name="message" rows="4" required></textarea>
+                </label>
+
+                <button class="pill primary"
+                        type="submit"
+                        data-i18n="form.submit">
+                    Send message
+                </button>
+
+                <p class="form-status" id="form-status" style="margin-top:12px;"></p>
+            </form>
 		</section>
 	</main>
 
 	<footer class="shell footer">
 		<div class="brand">
 			<div class="dot"></div>
-			<span class="brand-name">Marfeyx Studio</span>
+			<span class="brand-name">Marfeyx</span>
 		</div>
 		<div class="foot-links">
 			<a href="../index.html" data-i18n="footer.home">Home</a>
-			<a href="about.html" data-i18n="footer.about">Profile</a>
-			<a href="mailto:hello@marfeyx.com" data-i18n="footer.email">hello@marfeyx.com</a>
+			<a href="offers.html" data-i18n="footer.about">Offers</a>
+			<a href="mailto:contact.marfeyx@gmail.com" data-i18n="footer.email">contact.marfeyx@gmail.com</a>
 		</div>
 		<p class="hint" data-i18n="footer.copy">Built with intention - Always responsive</p>
 	</footer>

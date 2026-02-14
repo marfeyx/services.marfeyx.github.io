@@ -1,43 +1,43 @@
 const translations = {
 	en: {
-		brand: 'Marfeyx Studio',
+		brand: 'Marfeyx',
 		'nav.home': 'Home',
-		'nav.about': 'About',
+		'nav.about': 'Offers',
 		'nav.socials': 'Socials',
 		langToggle: 'Deutsch',
 		'cta.contact': "Let's talk",
 		'footer.home': 'Home',
-		'footer.about': 'Profile',
+		'footer.about': 'Offers',
 		'footer.socials': 'Socials',
-		'footer.email': 'hello@marfeyx.com',
+		'footer.email': 'contact.marfeyx@gmail.com',
 		'footer.copy': 'Built with intention - Always responsive',
 
 		'hero.eyebrow': 'Creative engineering meets clarity',
 		'hero.title': 'Digital services crafted with precision.',
-		'hero.body': 'I design and build clean, performant products with a calm, confident aesthetic - so your brand feels as polished as your roadmap.',
-		'hero.ctaPrimary': 'View profile',
-		'hero.ctaSecondary': 'See socials',
+		'hero.body': 'I design and build clean, performant products with your asthetic.',
+		'hero.ctaPrimary': 'Offers',
+		'hero.ctaSecondary': 'Socials',
 		'hero.meta1': 'Based in Germany - Remote-ready',
 		'hero.meta2': 'UX - Frontend - Systems thinking',
-		'hero.card1.label': 'Delivery cadence',
-		'hero.card1.value': '2-week ships',
-		'hero.card1.hint': 'Sprint-friendly releases with crisp documentation.',
-		'hero.card2.label': 'Stack',
-		'hero.card2.value': 'Design -> Code',
-		'hero.card2.hint': 'From Figma flows to production-grade frontends.',
-		'hero.card3.label': 'Focus',
-		'hero.card3.value': 'Calm products',
-		'hero.card3.hint': 'Glassmorphism, tactile motion, accessible defaults.',
+		'hero.card1.label': 'Delivery Insurance',
+		'hero.card1.value': '1 Month Delivery',
+		'hero.card1.hint': 'Websites will be shipped within one month unless specified',
+		'hero.card2.label': 'Design',
+		'hero.card2.value': 'Your Design',
+		'hero.card2.hint': 'Wether you only have a few ideas or a ready Mockup, I will make sure the website looks exactly like you pictured.',
+		'hero.card3.label': 'Documentation',
+		'hero.card3.value': 'Clear Documentation',
+		'hero.card3.hint': 'I write good documentation so anyone can understand and change my code if wanted.',
 
 		'services.eyebrow': 'Services',
 		'services.title': 'What I deliver',
-		'services.body': 'Strategy through implementation, always with a clear interface and rigorous craft.',
+		'services.body': 'Strategy trough implementation of the customers wishes',
 		'services.design.title': 'Product and visual design',
-		'services.design.body': 'Narrative-led UI systems with responsive, glassy surfaces and crisp typography.',
+		'services.design.body': 'The customers design, implemented with responsive layouts.',
 		'services.frontend.title': 'Frontend engineering',
-		'services.frontend.body': 'Accessible, performant builds with modern stacks, reusable components, and clean state.',
-		'services.strategy.title': 'Product direction',
-		'services.strategy.body': 'Roadmapping, experiments, and delivery rituals that keep teams aligned and calm.',
+		'services.frontend.body': 'Clean, performant builds with focus on SEO. Coded with clean classes and components.',
+		'services.strategy.title': 'Time planning',
+		'services.strategy.body': 'I deliver as fast as possible while making sure all wishes are respected.',
 
 		'process.eyebrow': 'Approach',
 		'process.title': 'A calm, outcome-first workflow',
@@ -56,179 +56,318 @@ const translations = {
 		'badge.point3': 'Design-to-code parity for a zero-friction handoff.',
 		'badge.cta': 'See the case study',
 
-		'about.eyebrow': 'About',
-		'about.title': 'I design calm, confident digital products.',
-		'about.body': 'Blending visual direction, UX thinking, and engineering rigor to build experiences that feel effortless - whether you are shipping an MVP or refining a flagship feature.',
-		'about.meta1': '10+ shipped initiatives',
-		'about.meta2': 'B2B - SaaS - DevTools',
-		'about.card.title': 'Signature strengths',
-		'about.card.item1': 'Systems-thinking for scalable UI',
-		'about.card.item2': 'Design-to-code parity',
-		'about.card.item3': 'Thoughtful motion and microcopy',
 
-		'journey.eyebrow': 'Journey',
-		'journey.title': 'A path shaped by product teams',
-		'journey.item1.title': 'Product designer -> Frontend lead',
-		'journey.item1.body': 'Led design systems and implemented component libraries that reduced UI defects by 28%.',
-		'journey.item2.title': 'Designing SaaS dashboards',
-		'journey.item2.body': 'Built glassy control panels with responsive grids, clear hierarchy, and zero dead-ends.',
-		'journey.item3.title': 'Foundations in UX writing',
-		'journey.item3.body': 'Microcopy and guidance that keep users oriented and confident in complex flows.',
+		'offers.eyebrow': 'Offers',
+		'offers.title': 'Pick the build that matches your scope.',
+		'offers.body': 'From a fast one-pager to a full progressive web app, each offer ships with clean code, responsive layouts, and clear handoff.',
+		'offers.meta1': 'Response in 24h',
+		'offers.meta2': 'Delivery from 1 week',
+		'offers.card.title': 'Always included',
+		'offers.card.item1': 'Responsive layouts',
+		'offers.card.item2': 'Performance pass',
+		'offers.card.item3': 'Docs + handover',
 
-		'values.eyebrow': 'Values',
-		'values.title': 'Principles I bring to every engagement',
-		'values.item1.title': 'Clarity before clever',
-		'values.item1.body': 'Every interaction is understandable at a glance, with depth for experts.',
-		'values.item2.title': 'Consistency as trust',
-		'values.item2.body': 'Design systems and coded components stay in lockstep, reducing cognitive load.',
-		'values.item3.title': 'Momentum with care',
-		'values.item3.body': 'Fast iterations with accessible defaults, performance budgets, and tidy handoffs.',
+		'offers.packages.eyebrow': 'Packages',
+		'offers.packages.title': 'Choose your scope',
+		'offers.packages.body': 'Clear deliverables, simple pricing, and transparent collaboration.',
+		'offers.pkg1.tier': 'Personal Project',
+		'offers.pkg1.title': 'Full Static Website',
+		'offers.pkg1.price': '200 CHF + 75 CHF / Page',
+		'offers.pkg1.feat1': '✅ Unlimited Amount Of Pages',
+		'offers.pkg1.feat2': '✅ SEO-Ready with Metadata',
+		'offers.pkg1.feat3': '✅ Well Documented',
+		'offers.pkg1.feat4': '\u00a0',
+		'offers.pkg1.feat5': '\u00a0',
+		'offers.pkg1.meta': 'Estimate: 2-4 Weeks',
+		'offers.pkg2.tier': 'Launch',
+		'offers.pkg2.title': 'Full Website',
+		'offers.pkg2.price': 'From 275 CHF',
+		'offers.pkg2.feat1': '✅ Unlimited Amount Of Pages',
+		'offers.pkg2.feat2': '✅ SEO-Ready with Metadata',
+		'offers.pkg2.feat3': '✅ Well Documented',
+		'offers.pkg2.feat4': '✅ Database Connection',
+		'offers.pkg2.feat5': '✅ Login and Registration',
+		'offers.pkg2.meta': 'Estimate: 4 Weeks',
+		'offers.pkg3.tier': 'Product',
+		'offers.pkg3.title': 'Full Progressive Web App',
+		'offers.pkg3.price': 'CHF 350 + 75 CHF / Page',
+		'offers.pkg3.feat1': '✅ Unlimited Amount Of Pages',
+		'offers.pkg3.feat2': '✅ SEO-Ready with Metadata',
+		'offers.pkg3.feat3': '✅ Well Documented',
+		'offers.pkg3.feat4': '✅ Downloadable',
+		'offers.pkg3.feat5': '✅ Available Offline',
+		'offers.pkg3.meta': 'Estimate: 3-4 Weeks',
 
-		'skillset.title': 'Toolbox',
-		'skillset.body': 'Always keen to pair with engineers, PMs, and founders to keep momentum high.',
-		'skillset.cta': 'Book a session',
+		'offers.process.eyebrow': 'Process',
+		'offers.process.title': 'How we deliver',
+		'offers.process.step1.title': 'Scope + schedule',
+		'offers.process.step1.body': 'Discuss pages, overall design and deadlines.',
+		'offers.process.step2.title': 'Demo Build',
+		'offers.process.step2.body': 'Before I start with the actual project, I will create a small demo build to confirm expectations.',
+		'offers.process.step3.title': 'Build',
+		'offers.process.step3.body': 'Building the actual webpage with continuous feedback from you.',
+		'offers.process.step4.title': 'Launch + Delivery',
+		'offers.process.step4.body': 'I deliver the final product and we finalize everything.',
+
+		'offers.addons.title': 'Add-ons',
+		'offers.addons.subtitle': 'Productized extras you can stack.',
+		'offers.addons.seo.tag': 'Customer Favourite',
+		'offers.addons.seo.title': 'Premium SEO Setup',
+		'offers.addons.seo.body': 'Average 95%+ SEO rating guaranteed for each page',
+		'offers.addons.seo.price': '27.99 CHF',
+		'offers.addons.seo.unit': '*',
+		'offers.addons.analytics.tag': 'Fast and Reliable',
+		'offers.addons.analytics.title': 'Lighthouse Performance Rating 95%+ Guaranteed',
+		'offers.addons.analytics.body': 'Optimize images and elements for optimal performance for each page.',
+		'offers.addons.analytics.price': '19.99 CHF',
+		'offers.addons.analytics.unit': '*',
+		'offers.addons.cms.tag': 'Flexible',
+		'offers.addons.cms.title': 'Multi-Language',
+		'offers.addons.cms.body': 'Have up to 3 built in website translations.',
+		'offers.addons.cms.price': '35.99 CHF',
 
 		'socials.eyebrow': 'Connect',
 		'socials.title': "Let's build something clear and bold.",
-		'socials.body': 'Whether you need a polished landing, a product refresh, or a design-to-code partner, I am here to collaborate.',
+		'socials.body': 'Wheter you have a question about my code, my packages or anything else.',
 		'socials.card.title': 'Availability',
-		'socials.card.body': 'Accepting new projects from Q2 - Remote-friendly - CET',
+		'socials.card.body': 'Getting back to you within 24 hours, contact me on:',
 
 		'contact.eyebrow': 'Socials',
 		'contact.title': 'Find me online',
-		'contact.body': 'Pick the channel that fits you best - responses within one business day.',
-		'contact.linkedin.body': 'Product stories, team updates, and collaboration threads.',
-		'contact.linkedin.cta': 'Open profile',
-		'contact.github.body': 'Live code, experiments, and frontend components.',
-		'contact.github.cta': 'View repos',
-		'contact.dribbble.body': 'Glassy UI shots, motion studies, and visual explorations.',
-		'contact.dribbble.cta': 'See shots',
+		'contact.body': 'Pick whatever suits you - getting back in 24 hours.',
+		'contact.linkedin.body': 'Quickest responses during buisness days.',
+		'contact.linkedin.cta': 'Open Mailto',
+		'contact.github.body': 'Find me on discord via the username marfeyx.',
+		'contact.github.cta': 'Download Discord',
+		'contact.dribbble.body': '',
+		'contact.dribbble.cta': '',
 
 		'form.eyebrow': 'Message',
-		'form.title': 'Tell me about your idea',
-		'form.body': 'Share context, goals, and timeline. I will reply with next steps and a suggested approach.',
+		'form.title': 'Contact me directly',
+		'form.body': 'Contact me directly about projects.',
 		'form.name': 'Name',
 		'form.email': 'Email',
-		'form.project': 'Project',
+		'form.project': 'Message',
 		'form.submit': 'Send message'
 	},
-	de: {
-		brand: 'Marfeyx Studio',
-		'nav.home': 'Start',
-		'nav.about': 'Profil',
-		'nav.socials': 'Socials',
-		langToggle: 'English',
-		'cta.contact': 'Lass uns sprechen',
-		'footer.home': 'Start',
-		'footer.about': 'Profil',
-		'footer.socials': 'Socials',
-		'footer.email': 'hello@marfeyx.com',
-		'footer.copy': 'Mit Sorgfalt gebaut - Immer responsiv',
+    de: {
+        brand: 'Marfeyx',
+        'nav.home': 'Home',
+        'nav.about': 'Angebote',
+        'nav.socials': 'Socials',
+        langToggle: 'English',
+        'cta.contact': 'Kontakt',
+        'footer.home': 'Home',
+        'footer.about': 'Angebote',
+        'footer.socials': 'Socials',
+        'footer.email': 'contact.marfeyx@gmail.com',
+        'footer.copy': 'Mit Anspruch gebaut · Immer responsive',
 
-		'hero.eyebrow': 'Klarheit trifft Engineering',
-		'hero.title': 'Digitale Services mit Präzision.',
-		'hero.body': 'Ich entwerfe und baue schlanke, performante Produkte mit ruhiger, souveräner Ästhetik - damit sich Ihre Marke so poliert anfühlt wie Ihre Roadmap.',
-		'hero.ctaPrimary': 'Profil ansehen',
-		'hero.ctaSecondary': 'Socials ansehen',
-		'hero.meta1': 'Basierend in Deutschland - Remote bereit',
-		'hero.meta2': 'UX - Frontend - Systems Thinking',
-		'hero.card1.label': 'Liefer-Rhythmus',
-		'hero.card1.value': '2-Wochen Ships',
-		'hero.card1.hint': 'Sprintfreundliche Releases mit klarer Doku.',
-		'hero.card2.label': 'Stack',
-		'hero.card2.value': 'Design -> Code',
-		'hero.card2.hint': 'Von Figma-Flows bis produktionsreife Frontends.',
-		'hero.card3.label': 'Fokus',
-		'hero.card3.value': 'Ruhige Produkte',
-		'hero.card3.hint': 'Glasmorphism, feine Motion, barrierearme Defaults.',
+        'hero.eyebrow': 'Engineering mit Klarheit',
+        'hero.title': 'Digitale Builds, präzise gemacht.',
+        'hero.body': 'Ich baue saubere, schnelle Produkte in deinem Look.',
+        'hero.ctaPrimary': 'Angebote',
+        'hero.ctaSecondary': 'Socials',
+        'hero.meta1': 'Deutschland · Remote möglich',
+        'hero.meta2': 'UX · Frontend · Systems',
+        'hero.card1.label': 'Delivery',
+        'hero.card1.value': '1 Monat',
+        'hero.card1.hint': 'Lieferung in 30 Tagen, falls nicht anders geplant.',
+        'hero.card2.label': 'Design',
+        'hero.card2.value': 'Dein Stil',
+        'hero.card2.hint': 'Von groben Ideen bis Mockup: ich treffe deinen Look.',
+        'hero.card3.label': 'Doku',
+        'hero.card3.value': 'Klar & kurz',
+        'hero.card3.hint': 'Saubere Doku, damit man den Code leicht versteht und ändert.',
 
-		'services.eyebrow': 'Leistungen',
-		'services.title': 'Was ich liefere',
-		'services.body': 'Von Strategie bis Umsetzung - immer mit klarer UI und sorgfältigem Handwerk.',
-		'services.design.title': 'Produkt- und Visual Design',
-		'services.design.body': 'Story-getriebene UI-Systeme mit responsiven, gläsernen Flächen und klarer Typografie.',
-		'services.frontend.title': 'Frontend Engineering',
-		'services.frontend.body': 'Zugängliche, performante Builds mit modernen Stacks, wiederverwendbaren Komponenten und sauberem State.',
-		'services.strategy.title': 'Produkt-Strategie',
-		'services.strategy.body': 'Roadmaps, Experimente und Rituale, die Teams ausrichten und Ruhe bringen.',
+        'services.eyebrow': 'Services',
+        'services.title': 'Was du bekommst',
+        'services.body': 'Wunsch rein, saubere Umsetzung raus.',
+        'services.design.title': 'Design & UI',
+        'services.design.body': 'Dein Design, umgesetzt in responsive Layouts.',
+        'services.frontend.title': 'Frontend',
+        'services.frontend.body': 'Schnell, sauber, SEO-fokussiert. Gute Klassen, klare Komponenten.',
+        'services.strategy.title': 'Planung',
+        'services.strategy.body': 'Schnell liefern, sauber bleiben. Ohne Wünsche zu verlieren.',
 
-		'process.eyebrow': 'Vorgehen',
-		'process.title': 'Ein ruhiger, ergebnisorientierter Ablauf',
-		'process.step1.title': 'Problem schärfen',
-		'process.step1.body': 'Knappe Briefings, User Journeys und Erfolgsmetriken, damit jedes Pixel Sinn hat.',
-		'process.step2.title': 'Schnell prototypen',
-		'process.step2.body': 'Interaktive Prototypen mit Motion und Microcopy, um früh Feedback zu bekommen.',
-		'process.step3.title': 'Sorgfältig shippen',
-		'process.step3.body': 'Produktionsreife Builds, Doku und Handover, die Teams auch nach Launch sicher halten.',
+        'process.eyebrow': 'Ablauf',
+        'process.title': 'Ruhig, klar, zielorientiert',
+        'process.step1.title': 'Klarziehen',
+        'process.step1.body': 'Briefing, Journey, Ziele. Damit jedes Pixel Sinn hat.',
+        'process.step2.title': 'Schnell testen',
+        'process.step2.body': 'Prototypen mit Motion & Text, damit Feedback früh kommt.',
+        'process.step3.title': 'Sauber liefern',
+        'process.step3.body': 'Production-ready Build, Doku und Handoff für ein sicheres Launch.',
 
-		'badge.title': 'Signature Projekt',
-		'badge.body': 'Vereinter Onboarding-Workspace steigerte Activation um 41% in drei Sprints.',
-		'badge.sub': 'Fokus: gefuhrtes Setup, Live-Status und eine ruhigere UI-Oberflache.',
-		'badge.point1': 'Strukturierte Tour mit progressiver Offenlegung.',
-		'badge.point2': 'Kontext-Hilfe direkt in die Shell eingebettet.',
-		'badge.point3': 'Design-zu-Code Paritat fur reibungslosen Handoff.',
-		'badge.cta': 'Case Study ansehen',
+        'badge.title': 'Signature Work',
+        'badge.body': 'Ein Setup-Workspace, +41% Activation in drei Sprints.',
+        'badge.sub': 'Fokus: geführtes Setup, Live-Status, ruhige Oberfläche.',
+        'badge.point1': 'Geführte Tour mit klaren Schritten.',
+        'badge.point2': 'Hilfe direkt im UI, ohne zu nerven.',
+        'badge.point3': 'Design = Code: reibungsloser Handoff.',
+        'badge.cta': 'Case Study ansehen',
 
-		'about.eyebrow': 'Über mich',
-		'about.title': 'Ich gestalte ruhige, souveräne digitale Produkte.',
-		'about.body': 'Visuelle Richtung, UX-Denken und Engineering-Rigor vereint für mühelose Experiences - ob MVP oder Mature Feature.',
-		'about.meta1': '10+ ausgelieferte Initiativen',
-		'about.meta2': 'B2B - SaaS - DevTools',
-		'about.card.title': 'Stärken',
-		'about.card.item1': 'Systems Thinking für skalierbare UI',
-		'about.card.item2': 'Design-zu-Code Parität',
-		'about.card.item3': 'Feine Motion und Microcopy',
+        'offers.eyebrow': 'Angebote',
+        'offers.title': 'Wähle den Scope, der passt.',
+        'offers.body': 'Vom One-Pager bis PWA: sauberer Code, responsive Layouts, klare Übergabe.',
+        'offers.meta1': 'Antwort in 24h',
+        'offers.meta2': 'Start ab 1 Woche',
+        'offers.card.title': 'Immer dabei',
+        'offers.card.item1': 'Responsive Layouts',
+        'offers.card.item2': 'Performance-Check',
+        'offers.card.item3': 'Doku + Handoff',
 
-		'journey.eyebrow': 'Werdegang',
-		'journey.title': 'Geprägt von Produktteams',
-		'journey.item1.title': 'Produktdesigner -> Frontend Lead',
-		'journey.item1.body': 'Design Systeme geführt und Komponentenbibliotheken gebaut, die UI-Fehler um 28% senkten.',
-		'journey.item2.title': 'SaaS Dashboards gestaltet',
-		'journey.item2.body': 'Gläserne Control Panels mit responsiven Grids, klarer Hierarchie und ohne Sackgassen.',
-		'journey.item3.title': 'Basis in UX Writing',
-		'journey.item3.body': 'Microcopy und Guidance, die Nutzende in komplexen Flows sicher halten.',
+        'offers.packages.eyebrow': 'Pakete',
+        'offers.packages.title': 'Wähle deinen Scope',
+        'offers.packages.body': 'Klare Deliverables, simple Preise, transparente Zusammenarbeit.',
+        'offers.pkg1.tier': 'Privat',
+        'offers.pkg1.title': 'Statische Website',
+        'offers.pkg1.price': '200 CHF + 75 CHF / Seite',
+        'offers.pkg1.feat1': '✅ Beliebig viele Seiten',
+        'offers.pkg1.feat2': '✅ SEO-ready + Metadaten',
+        'offers.pkg1.feat3': '✅ Sauber dokumentiert',
+        'offers.pkg1.feat4': '\u00a0',
+        'offers.pkg1.feat5': '\u00a0',
+        'offers.pkg1.meta': 'Dauer: 2–4 Wochen',
 
-		'values.eyebrow': 'Werte',
-		'values.title': 'Prinzipien in jedem Projekt',
-		'values.item1.title': 'Klar vor clever',
-		'values.item1.body': 'Jede Interaktion auf den ersten Blick verständlich, mit Tiefe für Profis.',
-		'values.item2.title': 'Konsistenz baut Vertrauen',
-		'values.item2.body': 'Design Systeme und Code-Komponenten bleiben im Gleichschritt und senken kognitive Last.',
-		'values.item3.title': 'Momentum mit Sorgfalt',
-		'values.item3.body': 'Schnelle Iterationen mit zugänglichen Defaults, Performance-Budgets und sauberem Handoff.',
+        'offers.pkg2.tier': 'Launch',
+        'offers.pkg2.title': 'Full Website',
+        'offers.pkg2.price': 'Ab 275 CHF',
+        'offers.pkg2.feat1': '✅ Beliebig viele Seiten',
+        'offers.pkg2.feat2': '✅ SEO-ready + Metadaten',
+        'offers.pkg2.feat3': '✅ Sauber dokumentiert',
+        'offers.pkg2.feat4': '✅ Datenbank',
+        'offers.pkg2.feat5': '✅ Login + Signup',
+        'offers.pkg2.meta': 'Dauer: 4 Wochen',
 
-		'skillset.title': 'Werkzeugkasten',
-		'skillset.body': 'Ich arbeite gerne eng mit Engineers, PMs und Founders, um Tempo hochzuhalten.',
-		'skillset.cta': 'Session buchen',
+        'offers.pkg3.tier': 'Produkt',
+        'offers.pkg3.title': 'Progressive Web App',
+        'offers.pkg3.price': 'CHF 350 + 75 CHF / Seite',
+        'offers.pkg3.feat1': '✅ Beliebig viele Seiten',
+        'offers.pkg3.feat2': '✅ SEO-ready + Metadaten',
+        'offers.pkg3.feat3': '✅ Sauber dokumentiert',
+        'offers.pkg3.feat4': '✅ Installierbar',
+        'offers.pkg3.feat5': '✅ Offline nutzbar',
+        'offers.pkg3.meta': 'Dauer: 3–4 Wochen',
 
-		'socials.eyebrow': 'Kontakt',
-		'socials.title': 'Lass uns etwas Klaren und Mutiges bauen.',
-		'socials.body': 'Ob Landing Page, Produkt-Refresh oder Design-to-Code Partner - ich freue mich auf Zusammenarbeit.',
-		'socials.card.title': 'Verfügbarkeit',
-		'socials.card.body': 'Neue Projekte ab Q2 - Remote freundlich - MEZ',
+        'offers.process.eyebrow': 'Prozess',
+        'offers.process.title': 'So liefere ich',
+        'offers.process.step1.title': 'Scope + Timing',
+        'offers.process.step1.body': 'Seiten, Look und Deadline kurz abklären.',
+        'offers.process.step2.title': 'Demo Build',
+        'offers.process.step2.body': 'Erst ein Mini-Demo, damit Erwartungen sauber sitzen.',
+        'offers.process.step3.title': 'Build',
+        'offers.process.step3.body': 'Ich baue die Seite, du gibst laufend Feedback.',
+        'offers.process.step4.title': 'Launch + Handoff',
+        'offers.process.step4.body': 'Finale Übergabe, letzte Checks, dann live.',
 
-		'contact.eyebrow': 'Socials',
-		'contact.title': 'Finde mich online',
-		'contact.body': 'Wähle den Kanal, der passt - Antwort innerhalb eines Werktags.',
-		'contact.linkedin.body': 'Produktstories, Team-Updates und Kollaborations-Threads.',
-		'contact.linkedin.cta': 'Profil öffnen',
-		'contact.github.body': 'Live-Code, Experimente und Frontend-Komponenten.',
-		'contact.github.cta': 'Repos ansehen',
-		'contact.dribbble.body': 'Gläserne UI-Shots, Motion-Studien und visuelle Explorations.',
-		'contact.dribbble.cta': 'Shots ansehen',
+        'offers.addons.title': 'Add-ons',
+        'offers.addons.subtitle': 'Extras, die du stapeln kannst.',
+        'offers.addons.seo.tag': 'Bestseller',
+        'offers.addons.seo.title': 'SEO Setup (Pro)',
+        'offers.addons.seo.body': 'Ø 95%+ SEO-Score pro Seite (bis 8 Seiten).',
+        'offers.addons.seo.price': '27.99 CHF',
+        'offers.addons.seo.unit': '*',
+        'offers.addons.analytics.tag': 'Schnell & stabil',
+        'offers.addons.analytics.title': 'Lighthouse 95%+',
+        'offers.addons.analytics.body': 'Bilder & Assets optimiert für Top-Performance pro Seite.',
+        'offers.addons.analytics.price': '19.99 CHF',
+        'offers.addons.analytics.unit': '*',
+        'offers.addons.cms.tag': 'Flexibel',
+        'offers.addons.cms.title': 'Mehrsprachig',
+        'offers.addons.cms.body': 'Bis zu 3 Sprachen direkt eingebaut.',
+        'offers.addons.cms.price': '35.99 CHF',
 
-		'form.eyebrow': 'Nachricht',
-		'form.title': 'Erzähl mir von deiner Idee',
-		'form.body': 'Teile Kontext, Ziele und Timeline. Ich antworte mit nächsten Schritten und Ansatz.',
-		'form.name': 'Name',
-		'form.email': 'E-Mail',
-		'form.project': 'Projekt',
-		'form.submit': 'Nachricht senden'
-	}
+        'socials.eyebrow': 'Kontakt',
+        'socials.title': 'Lass uns was Klareres bauen.',
+        'socials.body': 'Fragen zu Code, Paketen oder irgendwas anderem?',
+        'socials.card.title': 'Antwortzeit',
+        'socials.card.body': 'Ich antworte in 24h. Schreib mir hier:',
+
+        'contact.eyebrow': 'Socials',
+        'contact.title': 'Online finden',
+        'contact.body': 'Wähle, was passt. Antwort in 24h.',
+        'contact.linkedin.body': 'Am schnellsten an Werktagen.',
+        'contact.linkedin.cta': 'Mail öffnen',
+        'contact.github.body': 'Discord: marfeyx',
+        'contact.github.cta': 'Discord laden',
+        'contact.dribbble.body': '',
+        'contact.dribbble.cta': '',
+
+        'form.eyebrow': 'Nachricht',
+        'form.title': 'Direkt schreiben',
+        'form.body': 'Schreib mir kurz zu deinem Projekt.',
+        'form.name': 'Name',
+        'form.email': 'E-Mail',
+        'form.project': 'Nachricht',
+        'form.submit': 'Senden'
+    }
 };
 
 const THEME_KEY = 'marfeyx-theme';
 const LANG_KEY = 'marfeyx-lang';
+const LANG_TTL_MS = 15 * 60 * 1000;
+
+const storeLanguage = (lang) => {
+	const payload = { lang: lang === 'de' ? 'de' : 'en', ts: Date.now() };
+	try {
+		localStorage.setItem(LANG_KEY, JSON.stringify(payload));
+	} catch (err) {
+		console.warn('Could not store language preference', err);
+	}
+};
+
+const getStoredLanguage = () => {
+	try {
+		const raw = localStorage.getItem(LANG_KEY);
+		if (!raw) return null;
+		const parsed = JSON.parse(raw);
+		if (!parsed?.lang || !parsed?.ts) return null;
+		const age = Date.now() - parsed.ts;
+		if (age > LANG_TTL_MS) {
+			localStorage.removeItem(LANG_KEY);
+			return null;
+		}
+		return parsed.lang;
+	} catch (err) {
+		console.warn('Could not read language preference', err);
+		return null;
+	}
+};
+
+const hideLangToggle = () => {};
+
+const showLanguagePrompt = () => {
+	if (document.querySelector('.lang-overlay')) return;
+	const overlay = document.createElement('div');
+	overlay.className = 'lang-overlay';
+	overlay.innerHTML = `
+		<div class="lang-modal">
+			<p class="eyebrow">Language</p>
+			<h3>Choose your language</h3>
+			<div class="lang-options">
+				<button class="pill lang-option" data-lang-choice="en">English</button>
+				<button class="pill lang-option" data-lang-choice="de">Deutsch</button>
+			</div>
+		</div>
+	`;
+	document.body.appendChild(overlay);
+
+	overlay.querySelectorAll('[data-lang-choice]').forEach((btn) => {
+		btn.addEventListener('click', () => {
+			const lang = btn.getAttribute('data-lang-choice');
+			applyLanguage(lang);
+			storeLanguage(lang);
+			overlay.remove();
+		});
+	});
+};
+
+const toggleLanguage = () => {
+	const current = document.body.getAttribute('data-lang') === 'de' ? 'en' : 'de';
+	applyLanguage(current);
+	storeLanguage(current);
+};
 
 const applyTheme = (theme) => {
 	const next = theme === 'light' ? 'light' : 'dark';
@@ -257,15 +396,19 @@ const applyLanguage = (lang) => {
 		const label = langToggle.querySelector('.lang-label');
 		if (label) label.textContent = dict.langToggle;
 	}
-	localStorage.setItem(LANG_KEY, locale);
 };
 
 const init = () => {
 	const storedTheme = localStorage.getItem(THEME_KEY) || 'dark';
 	applyTheme(storedTheme);
 
-	const storedLang = localStorage.getItem(LANG_KEY) || 'en';
-	applyLanguage(storedLang);
+	const storedLang = getStoredLanguage();
+	if (storedLang) {
+		applyLanguage(storedLang);
+	} else {
+		applyLanguage('en');
+		showLanguagePrompt();
+	}
 
 	const themeToggle = document.getElementById('theme-toggle');
 	if (themeToggle) {
@@ -278,21 +421,47 @@ const init = () => {
 	const langToggle = document.getElementById('lang-toggle');
 	if (langToggle) {
 		langToggle.addEventListener('click', () => {
-			const current = document.body.getAttribute('data-lang') === 'de' ? 'en' : 'de';
-			applyLanguage(current);
+			toggleLanguage();
 		});
 	}
 
 	const form = document.querySelector('form');
-	if (form) {
-		form.addEventListener('submit', (e) => {
-			e.preventDefault();
-			form.reset();
-			const locale = document.body.getAttribute('data-lang');
-			const message = locale === 'de' ? 'Danke! Ich melde mich bald.' : 'Thank you! I will reply soon.';
-			alert(message);
-		});
-	}
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const status = document.getElementById('form-status');
+            const locale = document.body.getAttribute('data-lang');
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    form.reset();
+                    status.textContent = locale === 'de'
+                        ? 'Danke! Ich melde mich bald.'
+                        : 'Thank you! I will reply soon.';
+                    status.style.color = '#4ade80';
+                } else {
+                    status.textContent = locale === 'de'
+                        ? 'Etwas ist schiefgelaufen. Bitte erneut versuchen.'
+                        : 'Something went wrong. Please try again.';
+                    status.style.color = '#f87171';
+                }
+            } catch (error) {
+                status.textContent = locale === 'de'
+                    ? 'Netzwerkfehler. Bitte später versuchen.'
+                    : 'Network error. Please try later.';
+                status.style.color = '#f87171';
+            }
+        });
+    }
 };
 
 document.addEventListener('DOMContentLoaded', init);
