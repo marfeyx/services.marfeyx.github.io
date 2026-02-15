@@ -81,7 +81,6 @@
 	const getPagesValidation = () => {
 		const raw = (pageInput?.value || '').trim();
 
-		// allow empty while typing
 		if (raw === '') {
 			return { state: 'empty', pages: null, error: '' };
 		}
@@ -104,21 +103,26 @@
 	const updateTotals = () => {
 		const { state, pages, error } = getPagesValidation();
 
-		// warning only when numeric pages exist
 		addonWarning.textContent = Number.isFinite(pages) && pages > 8 ? 'Addons not available with 9+ Pages' : '';
 
-		// keep hidden page input in sync
 		pageCountInput.value = Number.isFinite(pages) ? pages : '';
+
 
 		const addOnSum = addonsTotal();
 		const base = selectedPackage ? selectedPackage.basePrice : 0;
 
-		// Always show *something* sensible in the total:
-		// - if package selected: base + addons (+ pages if valid)
-		// - if no package: addons only (or 0)
+		// Always reflect the chosen package immediately, even before page count is set
+		if (selectedPackage) {
+			selectedPackageLabel.textContent = `${selectedPackage.name} (${formatPrice(base)})`;
+			selectedPackageInput.value = selectedPackage.name;
+		} else {
+			selectedPackageLabel.textContent = 'Select a package to continue';
+			selectedPackageInput.value = '';
+			hidePageBreakdown();
+		}
+
 		const partialTotal = base + addOnSum;
 
-		// empty pages: show base+addons, hide breakdown, don't write estimated_total
 		if (state === 'empty') {
 			setPagesError('');
 			hidePageBreakdown();
@@ -128,7 +132,6 @@
 			return;
 		}
 
-		// invalid pages: show base+addons (still!), hide breakdown, don't write estimated_total
 		if (state === 'invalid') {
 			setPagesError(error);
 			hidePageBreakdown();
@@ -138,7 +141,6 @@
 			return;
 		}
 
-		// valid pages: full calc
 		setPagesError('');
 
 		let total = partialTotal;
@@ -146,18 +148,11 @@
 		if (selectedPackage) {
 			const pageTotal = pages * PER_PAGE_PRICE;
 			total += pageTotal;
-
-			selectedPackageLabel.textContent = `${selectedPackage.name} (${formatPrice(base)})`;
-			selectedPackageInput.value = selectedPackage.name;
-
 			showPageBreakdown(pages, pageTotal);
 		} else {
-			selectedPackageInput.value = '';
-			selectedPackageLabel.textContent = 'Select a package to continue';
 			hidePageBreakdown();
 		}
 
-		// Only store estimated total if it’s a real, complete calculation
 		estimatedTotalInput.value = selectedPackage ? Number(total).toFixed(2) : '';
 		totalPriceEl.textContent = (selectedPackage || addOnSum > 0) ? formatPrice(total) : '0 CHF';
 	};
