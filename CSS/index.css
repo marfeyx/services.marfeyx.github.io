@@ -43,7 +43,7 @@ body {
 }
 
 body[data-page="home"] {
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 .bg-layers {
@@ -223,4 +223,5 @@ main { padding: 30px 0 80px; display: flex; flex-direction: column; gap: 28px; }
 	.pill { padding: 10px 12px; font-size: 14px; }
 	.hero-card, .card, .steps li { padding: 14px; }
 	main { padding: 10px 0 60px; }
+	.footer { display: none; }
 }

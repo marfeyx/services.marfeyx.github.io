@@ -47,4 +47,5 @@ body[data-page="not-found"] {
 
 @media (max-width: 600px) {
 	.nf-card { padding: 20px; }
+	.footer { display: none; }
 }

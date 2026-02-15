@@ -24,7 +24,22 @@
 	let selectedPackage = null;
 	const selectedAddons = new Map();
 
-	const PER_PAGE_PRICE = 75;
+// Format prices consistently for display
+	const formatMoney = (value) => {
+		const num = Number(value || 0);
+		const fixed = num.toFixed(2);
+		return `${fixed.replace(/\.00$/, '')} CHF`;
+	};
+
+	// Reflect data attributes into the visible price labels so cards and totals stay in sync
+	packageCards.forEach((card) => {
+		const base = Number(card.dataset.basePrice || 0);
+		const perPage = Number(card.dataset.pagePrice || 0);
+		const priceLabel = card.querySelector('.price');
+		if (priceLabel) {
+			priceLabel.textContent = `${formatMoney(base)} + ${formatMoney(perPage)} / Page`;
+		}
+	});
 
 	const formatPrice = (value) => {
 		const rounded = Number(value || 0).toFixed(2);
@@ -146,7 +161,8 @@
 		let total = partialTotal;
 
 		if (selectedPackage) {
-			const pageTotal = pages * PER_PAGE_PRICE;
+			const perPage = Number(selectedPackage.pagePrice || 0);
+			const pageTotal = pages * perPage;
 			total += pageTotal;
 			showPageBreakdown(pages, pageTotal);
 		} else {
@@ -165,6 +181,7 @@
 			id: card.dataset.packageId,
 			name: card.dataset.packageName,
 			basePrice: Number(card.dataset.basePrice || 0),
+			pagePrice: Number(card.dataset.pagePrice || 0),
 		};
 
 		formStatus.textContent = '';
