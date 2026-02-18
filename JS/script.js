@@ -151,8 +151,8 @@ const translations = {
 		'custom.addons.cms.unit': '*',
 
 		'socials.eyebrow': 'Connect',
-		'socials.title': "Let's build something clear and bold.",
-		'socials.body': 'Whether you have a question about my code, my packages or anything else.',
+		'socials.title': "Get in Touch",
+		'socials.body': 'Have a question or a project in mind? Use the form below, or contact me directly.',
 		'socials.card.title': 'Availability',
 		'socials.card.body': 'Getting back to you within 24 hours, contact me on:',
 

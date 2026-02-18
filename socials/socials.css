@@ -1,0 +1,120 @@
+:root {
+	--bg: #05070d;
+	--panel: rgba(255, 255, 255, 0.06);
+	--border: rgba(255, 255, 255, 0.12);
+	--text: #e9ecf5;
+	--muted: #a7b0c6;
+	--accent: #8ec5ff;
+	--radius: 8px;
+	--font-family: 'Inter', sans-serif;
+}
+
+[data-theme="light"] {
+	--bg: #f5f7fb;
+	--panel: #ffffff;
+	--border: rgba(0, 0, 0, 0.08);
+	--text: #0d111a;
+	--muted: #4a5568;
+	--accent: #2c6df9;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+	background: var(--bg);
+	color: var(--text);
+	font-family: var(--font-family);
+	animation: fadeIn 0.5s ease-out;
+}
+
+.shell {
+	width: min(1100px, 92vw);
+	margin: 0 auto;
+}
+
+main {
+	flex-grow: 1;
+	padding: 30px 0 80px;
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+}
+
+.hero {
+	text-align: center;
+	padding: 20px 0;
+	animation: slideDown 0.6s ease-out;
+}
+
+.hero h1 {
+	font-size: clamp(32px, 4vw, 48px);
+	margin: 0 0 14px;
+}
+
+.lede {
+	font-size: 18px;
+	line-height: 1.6;
+	color: var(--muted);
+	max-width: 60ch;
+	margin: 0 auto;
+}
+
+.social-links {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 20px;
+	animation: fadeIn 0.5s ease-out 0.2s backwards;
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 28px;
+	background: var(--panel);
+}
+
+.card {
+	padding: 28px;
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	background: var(--panel);
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	align-items: flex-start;
+}
+
+.card h3 {
+	margin: 0;
+	font-size: 20px;
+}
+
+.card p {
+	margin: 0;
+	color: var(--muted);
+	flex-grow: 1;
+}
+
+.pill {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	border: 1px solid var(--border);
+	background: transparent;
+	color: var(--text);
+	padding: 10px 16px;
+	border-radius: var(--radius);
+	cursor: pointer;
+	font-weight: 600;
+	text-decoration: none;
+	transition: background-color 0.2s, transform 0.2s;
+}
+
+.pill:hover {
+	background-color: var(--border);
+	transform: translateY(-2px);
+}
+
+footer {
+	margin-top: auto;
+}
