@@ -1,6 +1,6 @@
 # Marfeyx - Creative Services Website
 
-This is the official repository for the Marfeyx creative services portfolio website, live at [services.marfeyx.ch](services.marfeyx.ch).
+This is the official repository for the Marfeyx creative services portfolio website, live at services.marfeyx.ch
 
 ## Project Overview
 
