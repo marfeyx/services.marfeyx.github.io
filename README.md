@@ -29,7 +29,6 @@ The design is intentionally minimal and content-focused. The goal is to provide 
 ### Customization
 
 *   **Colors & Fonts:** The color scheme and typography can be easily modified by changing the CSS variables defined at the top of `index.css` and other page-specific CSS files.
-*   **Content:** All text is in the HTML files. The `data-i18n` attributes are used by `script.js` to handle language switching. To add or change text, you'll need to update the corresponding HTML elements and the translation objects in the script.
 
 ---
 
