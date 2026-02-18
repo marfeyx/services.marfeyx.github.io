@@ -364,29 +364,7 @@ const getStoredLanguage = () => {
 const hideLangToggle = () => {};
 
 const showLanguagePrompt = () => {
-	if (document.querySelector('.lang-overlay')) return;
-	const overlay = document.createElement('div');
-	overlay.className = 'lang-overlay';
-	overlay.innerHTML = `
-		<div class="lang-modal">
-			<p class="eyebrow">Language</p>
-			<h3>Choose your language</h3>
-			<div class="lang-options">
-				<button class="pill lang-option" data-lang-choice="en">English</button>
-				<button class="pill lang-option" data-lang-choice="de">Deutsch</button>
-			</div>
-		</div>
-	`;
-	document.body.appendChild(overlay);
-
-	overlay.querySelectorAll('[data-lang-choice]').forEach((btn) => {
-		btn.addEventListener('click', () => {
-			const lang = btn.getAttribute('data-lang-choice');
-			applyLanguage(lang);
-			storeLanguage(lang);
-			overlay.remove();
-		});
-	});
+	// The language prompt has been removed.
 };
 
 const toggleLanguage = () => {
