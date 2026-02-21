@@ -227,6 +227,7 @@
 								autocomplete="email"
 								inputmode="email"
 								placeholder="name@example.com"
+								data-i18n-placeholder="custom.checkout.emailPlaceholder"
 							>
 						</label>
 
@@ -239,6 +240,7 @@
 								autocomplete="tel"
 								inputmode="tel"
 								placeholder="+41 00 000 00 00"
+								data-i18n-placeholder="custom.checkout.phonePlaceholder"
 								pattern="^\+?[1-9][\d\s]{7,18}$"
 								title="Enter a valid international phone number"
 							>
@@ -248,11 +250,11 @@
 
 						<label class="field">
 							<span data-i18n="custom.checkout.notes">Project notes (optional)</span>
-							<textarea name="message" rows="3" placeholder="Anything specific you want to add?"></textarea>
+							<textarea name="message" rows="3" placeholder="Anything specific you want to add?" data-i18n-placeholder="custom.checkout.notesPlaceholder"></textarea>
 						</label>
 
 						<button class="pill primary" type="submit" data-i18n="custom.checkout.submit">Create request</button>
-						<p class="fine-print">Submitting creates a request only. No payment is processed yet.</p>
+						<p class="fine-print" data-i18n="custom.checkout.disclaimer">Submitting creates a request only. No payment is processed yet.</p>
 						<p class="form-status" id="form-status" aria-live="polite"></p>
 					</div>
 				</div>
@@ -263,7 +265,7 @@
 	<footer class="shell footer">
 		<div class="brand">
 			<div class="dot"></div>
-			<span class="brand-name">Marfeyx</span>
+			<span class="brand-name" data-i18n="brand">Marfeyx</span>
 		</div>
 		<div class="foot-links">
 			<a href="/" data-i18n="footer.home">Home</a>
