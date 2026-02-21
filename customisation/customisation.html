@@ -17,7 +17,7 @@
 	<meta name="description" content="Web design and development packages from Marfeyx. Static sites, full websites with login/database, and PWAs. Clear scope, pricing, and delivery." />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="customisation.css">
 </head>
 <body data-page="offers" data-lang="en">
@@ -47,7 +47,7 @@
 			<div class="hero-text">
 				<p class="eyebrow" data-i18n="custom.eyebrow">custom offer</p>
 				<h1 data-i18n="custom.title">Customise an order and make a request.</h1>
-				<p class="lede" data-i18n="custom.body">Pick a package, stack add-ons, and send a request with your details.</p>
+				<p class="lede" data-i18n="custom.body">Choose a package, add-ons and view expected cost.</p>
 				<div class="meta">
 				</div>
 			</div>
@@ -57,7 +57,6 @@
 			<div class="section-head">
 				<p class="eyebrow" data-i18n="offers.packages.eyebrow">Packages</p>
 				<h2 data-i18n="offers.packages.title">Choose your scope</h2>
-				<p class="hint" data-i18n="offers.packages.body">Clear deliverables, simple pricing, and transparent collaboration.</p>
 			</div>
 			<div class="cards offers">
 				<article class="card selectable" role="button" tabindex="0"
@@ -71,7 +70,7 @@
 					</div>
 					<div class="card-heading">
 						<h3 data-i18n="offers.pkg1.title">Full Static Website</h3>
-						<div class="price" data-i18n="offers.pkg1.price">From 275 CHF</div>
+						<div class="price" data-i18n="offers.pkg1.price">200 CHF + 50 CHF / Page</div>
 					</div>
 					<ul class="feature-list">
 						<li data-i18n="offers.pkg1.feat1">✅ Unlimited Amount Of Pages</li>
@@ -92,7 +91,7 @@
 					</div>
 					<div class="card-heading">
 						<h3 data-i18n="offers.pkg3.title">Full Progressive Web App</h3>
-						<div class="price" data-i18n="offers.pkg3.price">From 400 CHF</div>
+						<div class="price" data-i18n="offers.pkg3.price">CHF 400 + 50 CHF / Page</div>
 					</div>
 					<ul class="feature-list">
 						<li data-i18n="offers.pkg3.feat1">✅ Unlimited Amount Of Pages</li>
@@ -122,8 +121,7 @@
 					<h4 data-i18n="custom.addons.seo.title">Premium SEO Setup</h4>
 					<p data-i18n="custom.addons.seo.body">Average 95%+ SEO rating guaranteed for each page.</p>
 					<div class="addon-price">
-						<span class="price" data-i18n="custom.addons.seo.price">29.95 CHF</span>
-						<span class="unit" data-i18n="custom.addons.seo.unit">*</span>
+						<span class="price" data-i18n="custom.addons.seo.price">39.95 CHF</span>
 					</div>
 				</article>
 				<article class="addon-card selectable" role="button" tabindex="0"
@@ -137,8 +135,7 @@
 					<h4 data-i18n="custom.addons.performance.title">Premium Performance Setup</h4>
 					<p data-i18n="custom.addons.performance.body">Average 95%+ Performance Lighthouse rating guaranteed for each page.</p>
 					<div class="addon-price">
-						<span class="price" data-i18n="custom.addons.performance.price">29.95 CHF</span>
-						<span class="unit" data-i18n="custom.addons.performance.unit">*</span>
+						<span class="price" data-i18n="custom.addons.performance.price">39.95 CHF</span>
 					</div>
 				</article>
 				<article class="addon-card selectable" role="button" tabindex="0"
@@ -152,17 +149,15 @@
 					<h4 data-i18n="custom.addons.cms.title">Multi-Language Setup</h4>
 					<p data-i18n="custom.addons.cms.body">Have a second language built in with translations.</p>
 					<div class="addon-price">
-						<span class="price" data-i18n="custom.addons.cms.price">35.95 CHF</span>
-						<span class="unit" data-i18n="custom.addons.cms.unit">*</span>
+						<span class="price" data-i18n="custom.addons.cms.price">49.95 CHF</span>
 					</div>
 				</article>
 			</div>
-			<p>*Price applies for a maximum of 8 pages</p>
 		</section>
 
 		<section class="grid checkout" id="checkout">
 			<div class="section-head">
-				<p class="eyebrow" data-i18n="custom.checkout.eyebrow">Checkout</p>
+				<p class="eyebrow" data-i18n="custom.checkout.eyebrow">Book a review</p>
 				<h2 data-i18n="custom.checkout.title">Review and send your request</h2>
 				<p class="hint" data-i18n="custom.checkout.body">This does not charge you yet—this only creates a request for me to review.</p>
 			</div>
@@ -218,10 +213,6 @@
 					</div>
 
 					<div class="contact">
-						<p class="eyebrow" data-i18n="custom.checkout.contactEyebrow">Contact</p>
-						<h3 data-i18n="custom.checkout.contactTitle">Share your details</h3>
-						<p class="hint" data-i18n="custom.checkout.contactBody">Enter your info to create the request. I will follow up within 24 hours.</p>
-
 						<label class="field">
 							<span data-i18n="custom.checkout.name">Name</span>
 							<input type="text" name="name" required>
@@ -236,6 +227,7 @@
 								autocomplete="email"
 								inputmode="email"
 								placeholder="name@example.com"
+								data-i18n-placeholder="custom.checkout.emailPlaceholder"
 							>
 						</label>
 
@@ -248,6 +240,7 @@
 								autocomplete="tel"
 								inputmode="tel"
 								placeholder="+41 00 000 00 00"
+								data-i18n-placeholder="custom.checkout.phonePlaceholder"
 								pattern="^\+?[1-9][\d\s]{7,18}$"
 								title="Enter a valid international phone number"
 							>
@@ -257,11 +250,11 @@
 
 						<label class="field">
 							<span data-i18n="custom.checkout.notes">Project notes (optional)</span>
-							<textarea name="message" rows="3" placeholder="Anything specific you want to add?"></textarea>
+							<textarea name="message" rows="3" placeholder="Anything specific you want to add?" data-i18n-placeholder="custom.checkout.notesPlaceholder"></textarea>
 						</label>
 
 						<button class="pill primary" type="submit" data-i18n="custom.checkout.submit">Create request</button>
-						<p class="fine-print">Submitting creates a request only. No payment is processed yet.</p>
+						<p class="fine-print" data-i18n="custom.checkout.disclaimer">Submitting creates a request only. No payment is processed yet.</p>
 						<p class="form-status" id="form-status" aria-live="polite"></p>
 					</div>
 				</div>
@@ -272,7 +265,7 @@
 	<footer class="shell footer">
 		<div class="brand">
 			<div class="dot"></div>
-			<span class="brand-name">Marfeyx</span>
+			<span class="brand-name" data-i18n="brand">Marfeyx</span>
 		</div>
 		<div class="foot-links">
 			<a href="/" data-i18n="footer.home">Home</a>

@@ -4,6 +4,7 @@ body[data-page="not-found"] {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 .nf-main {
