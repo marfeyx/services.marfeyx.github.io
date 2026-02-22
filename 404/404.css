@@ -1,18 +1,15 @@
-/* 404 page specific styles */
-
 body[data-page="not-found"] {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
-.nf-main {
+main.shell.nf-main {
 	flex: 1 0 auto;
 	display: grid;
 	place-items: center;
 	padding: 40px 0 80px;
-	animation: fadeIn 0.5s ease-out;
+	gap: 0;
 }
 
 .nf-card {
@@ -23,16 +20,6 @@ body[data-page="not-found"] {
 	border: 1px solid var(--border);
 	border-radius: var(--radius);
 	background: var(--panel);
-	animation: slideDown 0.5s ease-out 0.1s backwards;
-}
-
-.eyebrow {
-	color: var(--accent);
-	font-size: 14px;
-	font-weight: 600;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	margin-bottom: 16px;
 }
 
 .nf-card h1 {

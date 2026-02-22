@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="de" data-theme="dark">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#010101" media="(prefers-color-scheme: dark)">
 	<meta name="theme-color" content="#f9f9f9" media="(prefers-color-scheme: light)">
-	<title>404 — Page not found</title>
+	<title>Impressum - Marfeyx</title>
 	<link rel="icon" href="/ASSETS/HomeIcon.png" type="image/png">
-	<meta name="description" content="Page not found on marfeyx.ch">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/index.css">
-	<link rel="stylesheet" href="404.css">
 </head>
-<body data-page="not-found" data-lang="en">
-
-	<header class="shell page-header">
+<body data-page="legal" data-lang="de">
+	<header class="shell">
 		<div class="brand">
 			<div class="dot"></div>
 			<span class="brand-name" data-i18n="brand">Marfeyx</span>
@@ -38,13 +35,25 @@
 		</div>
 	</header>
 
-	<main class="shell page-main nf-main">
-		<section class="nf-card">
-			<p class="eyebrow" data-i18n="nf.code">404</p>
-			<h1 data-i18n="nf.title">Page not found</h1>
-			<p class="lede" data-i18n="nf.body">The link you followed is broken or the page has moved. Choose a destination below.</p>
-			<div class="cta-row nf-actions">
-				<a class="pill primary" href="/" data-i18n="nf.home">Go home</a>
+	<main class="shell">
+		<section class="hero">
+			<div class="hero-text">
+				<p class="eyebrow">Rechtliches</p>
+				<h1>Impressum</h1>
+			</div>
+		</section>
+
+		<section class="grid">
+			<div class="section-head">
+				<h2>Angaben gemäss geltendem Recht</h2>
+				<p class="hint">Anbieter:</p>
+                <p class="hint">Marfeyx (Freelancer, Schweiz)</p><br>
+                <p class="hint">Kontakt:</p>
+                <p class="hint">contact.marfeyx@gmail.com</p><br>
+                <p class="hint">Hinweis:</p>
+                <p class="hint">Dienstleistungen werden individuell vereinbart.</p>
+                <p class="hint">Es erfolgen keine Vertragsabschlüsse oder Zahlungen über diese Website.</p>
+                <p class="hint">Über diese Website werden keine Verträge abgeschlossen und keine Zahlungen abgewickelt. Eine Request-Anfrage ist unverbindlich.</p>
 			</div>
 		</section>
 	</main>
@@ -68,6 +77,5 @@
 	</footer>
 
 	<script src="/JS/script.js" defer></script>
-	<script src="/JS/customisation.js" defer></script>
 </body>
 </html>

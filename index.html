@@ -5,12 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Marfeyx - Creative Services</title>
 	<link rel="icon" href="/ASSETS/HomeIcon.png" type="image/png">
-	<meta name="description" content="Marfeyx builds fast, clean websites and progressive web apps with precision and clarity. Based in Germany, working remotely.">
-	<meta property="og:title" content="Marfeyx - Creative Services">
-	<meta property="og:description" content="Fast, precise digital builds. Websites, PWAs, clean frontend systems.">
-	<meta property="og:type" content="website">
+	<meta name="description" content="Marfeyx builds fast, clean websites and progressive web apps with precision and clarity. Based in Germany. Working remotely.">
+	<meta property="og:title" content="Marfeyx - Creative Services" />
+	<meta property="og:description" content="Fast, precise digital builds. Websites, PWAs, clean frontend systems." />
+	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://marfeyx.ch/">
 	<meta property="og:image" content="https://marfeyx.ch/assets/og/home.png">
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Marfeyx - Creative Services" />
+	<meta name="twitter:description" content="Fast, precise digital builds. Websites, PWAs, clean frontend systems." />
+	<meta name="twitter:image" content="https://marfeyx.ch/assets/og/home.png" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -22,13 +26,14 @@
 			<div class="dot"></div>
 			<span class="brand-name" data-i18n="brand">Marfeyx</span>
 		</div>
-		<nav class="nav">
+		<nav class="nav" id="site-nav">
 			<a href="/" class="active" data-i18n="nav.home">Home</a>
 			<a href="/offers/offers.html" data-i18n="nav.about">Offers</a>
 			<a href="/customisation/customisation.html" data-i18n="nav.customisation">Customisation</a>
 			<a href="/socials/socials.html" data-i18n="nav.socials">Socials</a>
 		</nav>
 		<div class="actions">
+			<button class="pill menu-toggle" id="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span></button>
 			<button class="pill" id="lang-toggle" type="button" aria-label="Language toggle">
 				<span class="lang-label" data-i18n="langToggle">Deutsch</span>
 			</button>
@@ -47,8 +52,8 @@
 				<div class="cta-row">
 					<a class="pill primary" href="/offers/offers.html" data-i18n="hero.ctaPrimary">Offers</a>
 					<a class="pill primary" href="/customisation/customisation.html" data-i18n="hero.ctaCustom">Customise a package</a>
-					<a class="pill primary" href="/contact/contact.html" data-i18n="hero.ctaSecondary">Socials</a>
-				</div>Inter
+					<a class="pill primary" href="/socials/socials.html" data-i18n="hero.ctaSecondary">Socials</a>
+				</div>
 				<div class="meta">
 					<span data-i18n="hero.meta1">Based in Aargau, Switzerland</span>
 					<span data-i18n="hero.meta2">Frontend · Webdesign</span>
@@ -72,6 +77,7 @@
 				</div>
 			</div>
 		</section>
+	</main>
 
 	<footer class="shell footer">
 		<div class="brand">
@@ -82,11 +88,15 @@
 			<a href="/offers/offers.html" data-i18n="footer.about">Offers</a>
 			<a href="/customisation/customisation.html" data-i18n="footer.customisation">Customisation</a>
 			<a href="/socials/socials.html" data-i18n="footer.socials">Socials</a>
-			<a href="mailto:contact.marfeyx@gmail.com" data-i18n="footer.email">contact.marfeyx@gmail.com</a>
 		</div>
-		<p class="hint" data-i18n="footer.copy">Built with intention - Always responsive</p>
+		<div class="legal-links">
+			<a href="impressum/impressum.html" data-i18n="footer.impressum">Impressum</a>
+			<a href="datenschutz/datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
+			<a href="rechtliches/rechtliches.html" data-i18n="footer.privacy">Rechtliches</a>
+		</div>
 	</footer>
 
 	<script src="/JS/script.js" defer></script>
+	<script src="/JS/customisation.js" defer></script>
 </body>
 </html>
