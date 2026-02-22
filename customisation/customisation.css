@@ -91,7 +91,10 @@ body[data-page="customisation"] .field input.error { border-color: #ff9a9a; }
 
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-input[type=number] { -moz-appearance: textfield; }
+input[type="number"] {
+	appearance: textfield;
+	-moz-appearance: textfield;
+}
 
 @media (max-width: 900px) {
 	body[data-page="customisation"] .checkout-grid { grid-template-columns: 1fr; }
