@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#010101" media="(prefers-color-scheme: dark)">
+	<meta name="theme-color" content="#f9f9f9" media="(prefers-color-scheme: light)">
 	<title>Contact - Marfeyx</title>
 	<link rel="icon" href="/ASSETS/ContactIcon.png" type="image/png">
 	<meta name="description" content="Contact Marfeyx directly about projects, collaborations or questions. Quick responses within 24 hours.">
@@ -14,6 +16,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/index.css">
 	<link rel="stylesheet" href="contact.css">
 </head>
 <body data-page="contact" data-lang="en">
@@ -22,13 +25,14 @@
 			<div class="dot"></div>
 			<span class="brand-name" data-i18n="brand">Marfeyx</span>
 		</div>
-		<nav class="nav">
+		<nav class="nav" id="site-nav">
 			<a href="/" class="nav-link" data-i18n="nav.home">Home</a>
 			<a href="/offers/offers.html" class="nav-link" data-i18n="nav.about">Offers</a>
 			<a href="/customisation/customisation.html" class="nav-link" data-i18n="nav.customisation">Customisation</a>
 			<a href="/socials/socials.html" class="nav-link" data-i18n="nav.socials">Socials</a>
 		</nav>
 		<div class="actions">
+			<button class="pill menu-toggle" id="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span></button>
 			<button class="pill" id="lang-toggle" type="button" aria-label="Language toggle">
 				<span class="lang-label" data-i18n="langToggle">Deutsch</span>
 			</button>
@@ -38,7 +42,7 @@
 		</div>
 	</header>
 
-	<main>
+	<main class="shell">
 		<section class="hero">
 			<div class="hero-text">
 				<p class="eyebrow" data-i18n="socials.eyebrow">Connect</p>
@@ -66,12 +70,12 @@
 
                 <label>
                     <span data-i18n="form.name">Name</span>
-                    <input type="text" name="name" required>
+                    <input type="text" name="name" autocomplete="name" required>
                 </label>
 
                 <label>
                     <span data-i18n="form.email">Email</span>
-                    <input type="email" name="email" required>
+                    <input type="email" name="email" autocomplete="email" required>
                 </label>
 
                 <label>
@@ -99,12 +103,16 @@
 			<a href="/" data-i18n="footer.home">Home</a>
 			<a href="/offers/offers.html" data-i18n="footer.about">Offers</a>
 			<a href="/customisation/customisation.html" data-i18n="footer.customisation">Customisation</a>
-			<a href="/contact/contact.html" data-i18n="footer.socials">Socials</a>
+			<a href="/socials/socials.html" data-i18n="footer.socials">Socials</a>
 			<a href="mailto:contact.marfeyx@gmail.com" data-i18n="footer.email">contact.marfeyx@gmail.com</a>
 		</div>
-		<p class="hint" data-i18n="footer.copy">Built with intention - Always responsive</p>
+		<div class="legal-links">
+			<a href="/impressum.html" data-i18n="footer.impressum">Impressum</a>
+			<a href="/datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
+		</div>
 	</footer>
 
 	<script src="/JS/script.js" defer></script>
+	<script src="/JS/customisation.js" defer></script>
 </body>
 </html>

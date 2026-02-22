@@ -1,4 +1,7 @@
 (function () {
+	if (document.body?.getAttribute('data-page') !== 'customisation') return;
+	const t = (key, fallback) => (window.t ? window.t(key, fallback) : (fallback || ''));
+
 	const packageCards = Array.from(document.querySelectorAll('[data-package-id]'));
 	const addonCards = Array.from(document.querySelectorAll('[data-addon-id]'));
 	const pageInput = document.getElementById('page-count');
@@ -24,20 +27,18 @@
 	let selectedPackage = null;
 	const selectedAddons = new Map();
 
-// Format prices consistently for display
 	const formatMoney = (value) => {
 		const num = Number(value || 0);
 		const fixed = num.toFixed(2);
 		return `${fixed.replace(/\.00$/, '')} CHF`;
 	};
 
-	// Reflect data attributes into the visible price labels so cards and totals stay in sync
 	packageCards.forEach((card) => {
 		const base = Number(card.dataset.basePrice || 0);
 		const perPage = Number(card.dataset.pagePrice || 0);
 		const priceLabel = card.querySelector('.price');
 		if (priceLabel) {
-			priceLabel.textContent = `${formatMoney(base)} + ${formatMoney(perPage)} / Page`;
+			priceLabel.textContent = `${formatMoney(base)} + ${formatMoney(perPage)} ${t('unit.perPage', '/ Page')}`;
 		}
 	});
 
@@ -61,7 +62,7 @@
 	const showPageBreakdown = (pages, pageTotal) => {
 		if (!pageBreakdownEl) return;
 		pageBreakdownEl.style.display = '';
-		pageBreakdownEl.textContent = `${pages} Page${pages > 1 ? 's' : ''} (${formatPrice(pageTotal)})`;
+		pageBreakdownEl.textContent = `${pages} ${pages > 1 ? t('unit.pages','Pages') : t('unit.page','Page')} (${formatPrice(pageTotal)})`;
 	};
 
 	const addonsTotal = () => {
@@ -75,7 +76,7 @@
 
 		if (!selectedAddons.size) {
 			const li = document.createElement('li');
-			li.textContent = 'No add-ons selected';
+			li.textContent = t('custom.checkout.noAddons', 'No add-ons selected');
 			li.dataset.i18n = 'custom.checkout.noAddons';
 			selectedAddonsList.appendChild(li);
 			selectedAddonsInput.value = '';
@@ -103,13 +104,13 @@
 		const pages = parseInt(raw, 10);
 
 		if (!Number.isFinite(pages)) {
-			return { state: 'invalid', pages: null, error: 'Please enter a valid number.' };
+			return { state: 'invalid', pages: null, error: t('custom.error.pages.nan', 'Please enter a valid number.') };
 		}
 		if (pages <= 0) {
-			return { state: 'invalid', pages, error: 'Pages must be at least 1.' };
+			return { state: 'invalid', pages, error: t('custom.error.pages.min', 'Pages must be at least 1.') };
 		}
 		if (pages > 20) {
-			return { state: 'invalid', pages, error: 'Max 20 pages allowed.' };
+			return { state: 'invalid', pages, error: t('custom.error.pages.max', 'Max 20 pages allowed.') };
 		}
 
 		return { state: 'valid', pages, error: '' };
@@ -118,20 +119,18 @@
 	const updateTotals = () => {
 		const { state, pages, error } = getPagesValidation();
 
-		addonWarning.textContent = Number.isFinite(pages) && pages > 8 ? 'Addons not available with 9+ Pages' : '';
+		if (addonWarning) addonWarning.textContent = Number.isFinite(pages) && pages > 8 ? t('custom.warn.addonsUnavailable', 'Add-ons are not available with 9+ pages.') : '';
 
 		pageCountInput.value = Number.isFinite(pages) ? pages : '';
-
 
 		const addOnSum = addonsTotal();
 		const base = selectedPackage ? selectedPackage.basePrice : 0;
 
-		// Always reflect the chosen package immediately, even before page count is set
 		if (selectedPackage) {
 			selectedPackageLabel.textContent = `${selectedPackage.name} (${formatPrice(base)})`;
 			selectedPackageInput.value = selectedPackage.name;
 		} else {
-			selectedPackageLabel.textContent = 'Select a package to continue';
+			selectedPackageLabel.textContent = t('custom.checkout.packageFallback', 'Select a package to continue');
 			selectedPackageInput.value = '';
 			hidePageBreakdown();
 		}
@@ -173,71 +172,64 @@
 		totalPriceEl.textContent = (selectedPackage || addOnSum > 0) ? formatPrice(total) : '0 CHF';
 	};
 
-	const handlePackageSelect = (card) => {
-		packageCards.forEach((pkg) => pkg.classList.remove('active'));
-		card.classList.add('active');
+	const setActiveCard = (cards, activeCard) => {
+		cards.forEach((c) => c.classList.toggle('active', c === activeCard));
+	};
 
+	const selectPackage = (card) => {
 		selectedPackage = {
 			id: card.dataset.packageId,
 			name: card.dataset.packageName,
 			basePrice: Number(card.dataset.basePrice || 0),
-			pagePrice: Number(card.dataset.pagePrice || 0),
+			pagePrice: Number(card.dataset.pagePrice || 0)
 		};
 
-		formStatus.textContent = '';
+		setActiveCard(packageCards, card);
 		updateTotals();
 	};
 
-	const handleAddonToggle = (card) => {
+	const toggleAddon = (card) => {
 		const id = card.dataset.addonId;
 		const name = card.dataset.addonName;
 		const price = Number(card.dataset.addonPrice || 0);
 
 		if (selectedAddons.has(id)) {
 			selectedAddons.delete(id);
-			card.classList.remove('active');
 		} else {
 			selectedAddons.set(id, { id, name, price });
-			card.classList.add('active');
 		}
 
+		card.classList.toggle('active', selectedAddons.has(id));
 		renderAddons();
 		updateTotals();
 	};
 
-	const attachInteractive = (elements, handler) => {
-		elements.forEach((el) => {
-			el.addEventListener('click', () => handler(el));
-			el.addEventListener('keydown', (event) => {
-				if (event.key === 'Enter' || event.key === ' ') {
-					event.preventDefault();
-					handler(el);
-				}
-			});
+	packageCards.forEach((card) => {
+		card.addEventListener('click', () => selectPackage(card));
+		card.addEventListener('keydown', (e) => {
+			if (e.key === 'Enter' || e.key === ' ') {
+				e.preventDefault();
+				selectPackage(card);
+			}
 		});
-	};
-
-	attachInteractive(packageCards, handlePackageSelect);
-	attachInteractive(addonCards, handleAddonToggle);
-	pageInput?.addEventListener('input', updateTotals);
-
-	form?.addEventListener('submit', (event) => {
-		if (!selectedPackage) {
-			event.preventDefault();
-			formStatus.textContent = 'Please choose a package before creating the request.';
-			return;
-		}
-
-		const { state, pages } = getPagesValidation();
-		if (state !== 'valid' || !Number.isFinite(pages)) {
-			event.preventDefault();
-			formStatus.textContent = 'Please enter a valid page count (1–20).';
-			return;
-		}
-
-		formStatus.textContent = 'Creating your request…';
 	});
+
+	addonCards.forEach((card) => {
+		card.addEventListener('click', () => toggleAddon(card));
+		card.addEventListener('keydown', (e) => {
+			if (e.key === 'Enter' || e.key === ' ') {
+				e.preventDefault();
+				toggleAddon(card);
+			}
+		});
+	});
+
+	pageInput?.addEventListener('input', updateTotals);
 
 	renderAddons();
 	updateTotals();
+
+	if (form && formStatus) {
+		formStatus.textContent = '';
+	}
 })();

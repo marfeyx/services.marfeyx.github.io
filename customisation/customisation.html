@@ -3,36 +3,40 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Custom Offer - Marfeyx</title>
+	<meta name="theme-color" content="#010101" media="(prefers-color-scheme: dark)">
+	<meta name="theme-color" content="#f9f9f9" media="(prefers-color-scheme: light)">
+	<title>Customisation - Marfeyx</title>
 	<link rel="icon" href="/ASSETS/cartIcon.png" type="image/png">
-	<meta property="og:title" content="Offers - Marfeyx" />
-	<meta property="og:description" content="Clear packages for static sites, full websites, and PWAs. Transparent pricing and delivery." />
+	<meta property="og:title" content="Customisation - Marfeyx" />
+	<meta property="og:description" content="Build a custom package: pick a base offer, add-ons, and send a request with an estimated price." />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://marfeyx.ch/customisation/customisation.html">
 	<meta property="og:image" content="https://marfeyx.ch/assets/og/offers.png">
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Offers - Marfeyx" />
-	<meta name="twitter:description" content="Clear packages for static sites, full websites, and PWAs. Transparent pricing and delivery." />
+	<meta name="twitter:title" content="Customisation - Marfeyx" />
+	<meta name="twitter:description" content="Build a custom package: pick a base offer, add-ons, and send a request with an estimated price." />
 	<meta name="twitter:image" content="https://marfeyx.ch/assets/og/offers.png" />
-	<meta name="description" content="Web design and development packages from Marfeyx. Static sites, full websites with login/database, and PWAs. Clear scope, pricing, and delivery." />
+	<meta name="description" content="Build a custom package: choose a base offer, add-ons, and send a request with an estimated price.">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/index.css">
 	<link rel="stylesheet" href="customisation.css">
 </head>
-<body data-page="offers" data-lang="en">
+<body data-page="customisation" data-lang="en">
 	<header class="shell">
 		<div class="brand">
 			<div class="dot"></div>
 			<span class="brand-name" data-i18n="brand">Marfeyx</span>
 		</div>
-		<nav class="nav">
+		<nav class="nav" id="site-nav">
 			<a href="/" class="nav-link" data-i18n="nav.home">Home</a>
 			<a href="/offers/offers.html" class="nav-link" data-i18n="nav.about">Offers</a>
 			<a href="/customisation/customisation.html" class="nav-link active" data-i18n="nav.customisation">Customisation</a>
 			<a href="/socials/socials.html" class="nav-link" data-i18n="nav.socials">Socials</a>
 		</nav>
 		<div class="actions">
+			<button class="pill menu-toggle" id="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span></button>
 			<button class="pill" id="lang-toggle" type="button" aria-label="Language toggle">
 				<span class="lang-label" data-i18n="langToggle">Deutsch</span>
 			</button>
@@ -45,7 +49,7 @@
 	<main class="shell">
 		<section class="hero">
 			<div class="hero-text">
-				<p class="eyebrow" data-i18n="custom.eyebrow">custom offer</p>
+				<p class="eyebrow" data-i18n="custom.eyebrow">Custom offer</p>
 				<h1 data-i18n="custom.title">Customise an order and make a request.</h1>
 				<p class="lede" data-i18n="custom.body">Choose a package, add-ons and view expected cost.</p>
 				<div class="meta">
@@ -63,7 +67,7 @@
 					 data-package-id="static"
 					 data-package-name="Full Static Website"
 					 data-base-price="200"
-					 data-page-price="75">
+					 data-page-price="50">
 					<div class="card-top">
 						<div class="icon">🧊</div>
 						<span class="tag" data-i18n="offers.pkg1.tier">Personal Project</span>
@@ -76,22 +80,20 @@
 						<li data-i18n="offers.pkg1.feat1">✅ Unlimited Amount Of Pages</li>
 						<li data-i18n="offers.pkg1.feat2">✅ SEO-Ready with Metadata</li>
 						<li data-i18n="offers.pkg1.feat3">✅ Well Documented</li>
-						<li data-i18n="offers.pkg1.feat4">&nbsp;</li>
-						<li data-i18n="offers.pkg1.feat5">&nbsp;</li>
 					</ul>
 				</article>
 				<article class="card selectable" role="button" tabindex="0"
 					 data-package-id="pwa"
 					 data-package-name="Full Progressive Web App"
-					 data-base-price="350"
-					 data-page-price="75">
+					 data-base-price="400"
+					 data-page-price="50">
 					<div class="card-top">
 						<div class="icon">⚡</div>
 						<span class="tag" data-i18n="custom.pkg3.tier">Application</span>
 					</div>
 					<div class="card-heading">
 						<h3 data-i18n="offers.pkg3.title">Full Progressive Web App</h3>
-						<div class="price" data-i18n="offers.pkg3.price">CHF 400 + 50 CHF / Page</div>
+						<div class="price" data-i18n="offers.pkg3.price">400 CHF + 50 CHF / Page</div>
 					</div>
 					<ul class="feature-list">
 						<li data-i18n="offers.pkg3.feat1">✅ Unlimited Amount Of Pages</li>
@@ -113,7 +115,7 @@
 				<article class="addon-card selectable" role="button" tabindex="0"
 				 data-addon-id="seo"
 				 data-addon-name="Premium SEO Setup"
-				 data-addon-price="29.95">
+				 data-addon-price="39.95">
 					<div class="addon-header">
 						<span class="icon">🔍</span>
 						<span class="tag" data-i18n="custom.addons.seo.tag">Recommended</span>
@@ -127,7 +129,7 @@
 				<article class="addon-card selectable" role="button" tabindex="0"
 				 data-addon-id="performance"
 				 data-addon-name="Premium Performance Setup"
-				 data-addon-price="29.95">
+				 data-addon-price="39.95">
 					<div class="addon-header">
 						<span class="icon">📈</span>
 						<span class="tag" data-i18n="custom.addons.performance.tag">Fast and Reliable</span>
@@ -141,7 +143,7 @@
 				<article class="addon-card selectable" role="button" tabindex="0"
 				 data-addon-id="cms"
 				 data-addon-name="Multi-Language Setup"
-				 data-addon-price="35.95">
+				 data-addon-price="49.95">
 					<div class="addon-header">
 						<span class="icon">🧩</span>
 						<span class="tag" data-i18n="custom.addons.cms.tag">International</span>
@@ -199,63 +201,36 @@
 
 						<label class="field inline-field">
 							<span data-i18n="custom.checkout.pagesLabel">How many pages? (Homepage, About Page, Product Page etc.)</span>
-							<input type="number" id="page-count" name="pages" inputmode="numeric">
-							<p class="fine-print" id="pages-error" aria-live="polite"></p>
+							<input id="page-count" type="number" min="1" max="20" inputmode="numeric">
 						</label>
 
+						<p id="pages-error"></p>
+
 						<div class="total">
-							<div>
-								<p class="eyebrow" data-i18n="custom.checkout.total">Estimated total</p>
-								<p class="hint" data-i18n="custom.checkout.notice">You are not charged now. I will reply with the final quote.</p>
-							</div>
+							<span class="eyebrow" data-i18n="custom.checkout.total">Estimated total</span>
 							<span class="total-value" id="total-price">0 CHF</span>
 						</div>
 					</div>
 
 					<div class="contact">
+
 						<label class="field">
-							<span data-i18n="custom.checkout.name">Name</span>
-							<input type="text" name="name" required>
+							<span data-i18n="form.name">Name</span>
+							<input type="text" name="name" autocomplete="name" required>
 						</label>
 
 						<label class="field">
-							<span data-i18n="custom.checkout.email">Email</span>
-							<input
-								type="email"
-								name="email"
-								required
-								autocomplete="email"
-								inputmode="email"
-								placeholder="name@example.com"
-								data-i18n-placeholder="custom.checkout.emailPlaceholder"
-							>
+							<span data-i18n="form.email">Email</span>
+							<input type="email" name="email" autocomplete="email" required>
 						</label>
 
 						<label class="field">
-							<span data-i18n="custom.checkout.phone">Phone number</span>
-							<input
-								type="tel"
-								name="phone"
-								required
-								autocomplete="tel"
-								inputmode="tel"
-								placeholder="+41 00 000 00 00"
-								data-i18n-placeholder="custom.checkout.phonePlaceholder"
-								pattern="^\+?[1-9][\d\s]{7,18}$"
-								title="Enter a valid international phone number"
-							>
-							<p class="fine-print" id="phone-error" aria-live="polite"></p>
+							<span data-i18n="custom.checkout.notes">Notes / request</span>
+							<textarea name="message" rows="6" placeholder="Tell me what you want…"></textarea>
 						</label>
 
-
-						<label class="field">
-							<span data-i18n="custom.checkout.notes">Project notes (optional)</span>
-							<textarea name="message" rows="3" placeholder="Anything specific you want to add?" data-i18n-placeholder="custom.checkout.notesPlaceholder"></textarea>
-						</label>
-
-						<button class="pill primary" type="submit" data-i18n="custom.checkout.submit">Create request</button>
-						<p class="fine-print" data-i18n="custom.checkout.disclaimer">Submitting creates a request only. No payment is processed yet.</p>
-						<p class="form-status" id="form-status" aria-live="polite"></p>
+						<button class="pill primary" type="submit" data-i18n="custom.checkout.submit">Send request</button>
+						<p class="form-status" id="form-status"></p>
 					</div>
 				</div>
 			</form>
@@ -269,11 +244,15 @@
 		</div>
 		<div class="foot-links">
 			<a href="/" data-i18n="footer.home">Home</a>
+			<a href="/offers/offers.html" data-i18n="footer.about">Offers</a>
 			<a href="/customisation/customisation.html" data-i18n="footer.customisation">Customisation</a>
-			<a href="/contact/contact.html" data-i18n="footer.socials">Socials</a>
+			<a href="/socials/socials.html" data-i18n="footer.socials">Socials</a>
 			<a href="mailto:contact.marfeyx@gmail.com" data-i18n="footer.email">contact.marfeyx@gmail.com</a>
 		</div>
-		<p class="hint" data-i18n="footer.copy">Built with intention - Always responsive</p>
+		<div class="legal-links">
+			<a href="/impressum.html" data-i18n="footer.impressum">Impressum</a>
+			<a href="/datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
+		</div>
 	</footer>
 
 	<script src="/JS/script.js" defer></script>

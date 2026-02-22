@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#010101" media="(prefers-color-scheme: dark)">
+	<meta name="theme-color" content="#f9f9f9" media="(prefers-color-scheme: light)">
 	<title>Socials - Marfeyx</title>
 	<link rel="icon" href="/ASSETS/ContactIcon.png" type="image/png">
 	<meta name="description" content="Connect with Marfeyx on GitHub, Discord, or via email.">
@@ -23,13 +25,14 @@
 			<div class="dot"></div>
 			<span class="brand-name" data-i18n="brand">Marfeyx</span>
 		</div>
-		<nav class="nav">
+		<nav class="nav" id="site-nav">
 			<a href="/" class="nav-link" data-i18n="nav.home">Home</a>
 			<a href="/offers/offers.html" class="nav-link" data-i18n="nav.about">Offers</a>
 			<a href="/customisation/customisation.html" class="nav-link" data-i18n="nav.customisation">Customisation</a>
 			<a href="/socials/socials.html" class="nav-link active" data-i18n="nav.socials">Socials</a>
 		</nav>
 		<div class="actions">
+			<button class="pill menu-toggle" id="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span></button>
 			<button class="pill" id="lang-toggle" type="button" aria-label="Language toggle">
 				<span class="lang-label" data-i18n="langToggle">Deutsch</span>
 			</button>
@@ -51,12 +54,12 @@
 		</section>
 
 		<section class="social-links">
-			<a href="https://github.com/marfeyx" class="social-card" target="_blank">
+			<a href="https://github.com/marfeyx" class="social-card" target="_blank" rel="noopener noreferrer">
 				<h3 data-i18n="socials.card.github.title">GitHub</h3>
 				<p data-i18n="socials.card.github.body">Check out my projects and contributions.</p>
 				<span class="pill" data-i18n="socials.card.github.cta">View Profile</span>
 			</a>
-			<a href="https://discord.gg/marfeyx" class="social-card" target="_blank">
+			<a href="https://discord.gg/marfeyx" class="social-card" target="_blank" rel="noopener noreferrer">
 				<h3 data-i18n="socials.card.discord.title">Discord</h3>
 				<p data-i18n="socials.card.discord.body">Join the community and chat with me directly.</p>
 				<span class="pill" data-i18n="socials.card.discord.cta">Join Server</span>
@@ -80,17 +83,16 @@
                 aria-label="Contact form">
 
                 <input type="text" name="_gotcha" style="display:none">
-
                 <input type="hidden" name="_subject" value="New message from marfeyx.ch">
 
                 <label>
                     <span data-i18n="form.name">Name</span>
-                    <input type="text" name="name" required>
+                    <input type="text" name="name" autocomplete="name" required>
                 </label>
 
                 <label>
                     <span data-i18n="form.email">Email</span>
-                    <input type="email" name="email" required>
+                    <input type="email" name="email" autocomplete="email" required>
                 </label>
 
                 <label>
@@ -98,11 +100,7 @@
                     <textarea name="message" rows="4" required></textarea>
                 </label>
 
-                <button class="pill primary"
-                        type="submit"
-                        data-i18n="form.submit">
-                    Send message
-                </button>
+                <button class="pill primary" type="submit" data-i18n="form.submit">Send message</button>
 
                 <p class="form-status" id="form-status" style="margin-top:12px;"></p>
             </form>
@@ -121,9 +119,13 @@
 			<a href="/socials/socials.html" data-i18n="footer.socials">Socials</a>
 			<a href="mailto:contact.marfeyx@gmail.com" data-i18n="footer.email">contact.marfeyx@gmail.com</a>
 		</div>
-		<p class="hint" data-i18n="footer.copy">Built with intention - Always responsive</p>
+		<div class="legal-links">
+			<a href="/impressum.html" data-i18n="footer.impressum">Impressum</a>
+			<a href="/datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
+		</div>
 	</footer>
 
 	<script src="/JS/script.js" defer></script>
+	<script src="/JS/customisation.js" defer></script>
 </body>
 </html>
