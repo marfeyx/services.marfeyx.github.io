@@ -98,6 +98,7 @@ header {
 .pill.primary { background: var(--accent); color: var(--bg); border-color: transparent; font-weight: 600; }
 .pill:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
 .pill.primary:hover { background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+.menu-toggle { display: none; }
 
 main { padding: 40px 0 80px; display: flex; flex-direction: column; gap: 40px; }
 
@@ -152,6 +153,7 @@ main { padding: 40px 0 80px; display: flex; flex-direction: column; gap: 40px; }
 
 @media (max-width: 900px) {
 	header { position: sticky; top: 10px; margin: 0 10px 10px; width: calc(100% - 20px); }
+	.menu-toggle { display: inline-flex; }
 	.nav { display: none; }
 	.actions { margin-left: auto; }
 	.hero, .grid, .columns { padding: 24px; }
